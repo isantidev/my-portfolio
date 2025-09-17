@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+    --font-onest: "Onest", system-UI;
+}
+
+@font-face {
+    font-family: "onest", system-ui, -apple-system, sans-serif;
+    src: url(@fonts/onest-cyrillic-100-normal.woff2);
+    font-weight: 100;
+}
