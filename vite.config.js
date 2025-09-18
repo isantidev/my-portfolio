@@ -10,6 +10,10 @@ export default defineConfig({
             "@fonts": "/src/assets/fonts",
             "@styles": "/src/styles",
             "@images": "/src/assets/images",
+<<<<<<< HEAD
+=======
+            "@root": "/",
+>>>>>>> main
         },
     },
 });
