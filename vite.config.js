@@ -7,10 +7,9 @@ export default defineConfig({
     plugins: [react(), tailwindcss()],
     resolve: {
         alias: {
-            "@fonts": "/src/assets/fonts",
             "@styles": "/src/styles",
             "@images": "/src/assets/images",
-            "@root": "/",
+            "@": "/src",
         },
     },
 });
