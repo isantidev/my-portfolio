@@ -8,11 +8,14 @@ const Hero = () => {
                 className="max-w-screen-xl mx-auto my-4 h-[80dvh] px-2"
             >
                 <div className="flex flex-col items-center justify-center gap-4">
-                    <span className="size-40 overflow-hidden rounded-full shadow-custom-accent/40 shadow-[0px_0px_15px_0px] ">
+                    <span
+                        area-label="profile picture"
+                        className="size-40 overflow-hidden rounded-full shadow-custom-accent/40 shadow-[0px_0px_15px_0px] "
+                    >
                         <img
                             className="h-full w-full object-cover"
                             src={profileImg}
-                            alt=""
+                            alt="Kevin Santiago Sierra Rodriguez's picture"
                         />
                     </span>
                     <div className="flex flex-col gap-2 justify-around items-center text-center">
