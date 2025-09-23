@@ -7,6 +7,12 @@ body,
     height: 100%;
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 @theme {
     --font-onest: "onest", system-UI, monospace, sans-serif;
     --color-custom-text: var(--color-text);
@@ -33,16 +39,16 @@ body,
     :root {
         --color-text: #121212;
         --color-bg: #f5f5f5;
-        --color-primary: #d0cfb4;
+        --color-primary: #475421;
         --color-secondary: #e6e6e6;
-        --color-accent: #16e952;
+        --color-accent: #1e3601;
     }
     .dark {
-        --color-text: #fdfdfd;
+        --color-text: #fefefe;
         --color-bg: #0a0a0a;
-        --color-primary: #4b4a2f;
-        --color-secondary: #1a1a1a;
-        --color-accent: #16e952;
+        --color-primary: #586343;
+        --color-secondary: #1c1d1a;
+        --color-accent: #aeff4c;
     }
 }
 
@@ -62,7 +68,6 @@ h1 {
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.02em;
-    margin-bottom: 0.5em;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -112,11 +117,10 @@ h6 {
 }
 
 p {
-    font-size: clamp(0.875rem, 2.2vw, 1.125rem);
+    font-size: clamp(0.75rem, 2vw, 1.125rem);
     font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0.002em;
-    margin-bottom: 1em;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -131,12 +135,19 @@ a {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-a:hover {
-    text-underline-offset: 0.12em;
+button {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    cursor: pointer;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.15em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-a:focus {
-    border-radius: 2px;
+a:hover {
+    text-underline-offset: 0.12em;
 }
 
 /* Mobile optimizations */
@@ -172,11 +183,16 @@ a:focus {
     }
 
     p {
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 1.65;
     }
 
     a {
+        text-decoration-thickness: 0.1em;
+        text-underline-offset: 0.12em;
+    }
+
+    button {
         text-decoration-thickness: 0.1em;
         text-underline-offset: 0.12em;
     }

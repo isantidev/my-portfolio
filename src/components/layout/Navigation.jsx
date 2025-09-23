@@ -22,17 +22,18 @@ const Navigation = () => {
 
     return (
         <>
-            <nav className="bg-custom-secondary/70">
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <nav className="inline-block w-full min-h-[4.5rem] md:min-h-16 justify-center bg-custom-secondary z-999">
+                <div className="fixed top-0 right-0 left-0 w-full max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 h-auto bg-custom-secondary">
                     <a href="#" className="flex items-center">
                         <span className="self-center text-[1.2rem] font-semibold whitespace-nowrap">
-                            Isantidev
+                            isantidev
                         </span>
                     </a>
                     <div className="flex items-center gap-3 md:gap-0 md:order-2">
                         <button
                             onClick={toggleTheme}
-                            className="size-8 rounded-full cursor-pointer bg-custom-primary/40 hover:bg-custom-primary/80 hover:shadow-sm hover:shadow-custom-text/20"
+                            className="size-8 rounded-full cursor-pointer bg-custom-primary/40 hover:bg-custom-accent/20 hover:shadow-sm hover:shadow-custom-text/20"
+
                         >
                             {theme === "light" ? (
                                 <IoMdSunny className="size-4 m-auto" />
@@ -62,11 +63,11 @@ const Navigation = () => {
                         } w-full md:block md:w-auto`}
                         id="navbar-solid-bg"
                     >
-                        <ul className="flex flex-col font-medium mt-4 rounded-lg bg-custom-primary/60 md:gap-4 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                        <ul className="flex flex-col font-medium mt-4 rounded-lg md:rounded-none overflow-hidden bg-custom-primary/40 md:gap-4 md:flex-row md:mt-0 md:border-0 md:bg-transparent">
                             <li>
                                 <a
                                     href="#"
-                                    className="block py-2 px-3 md:py-0.5 text-custom-text bg-custom-primary/80 rounded-sm md:bg-custom-primary/80 md:text-custom-text"
+                                    className="block py-2 px-3 md:py-0.5 text-custom-text bg-custom-accent/20 md:rounded-sm md:bg-custom-accent/20 md:text-custom-text"
                                     aria-current="page"
                                 >
                                     Home
@@ -75,7 +76,7 @@ const Navigation = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="block py-2 px-3 md:py-0.5 text-custom-text/90 rounded-sm hover:text-custom-text focus:text-custom-text focus:bg-custom-primary/80 md:border-0 md:hover:bg-custom-primary/70 "
+                                    className="block py-2 px-3 md:py-0.5 text-custom-text/90 md:rounded-sm md:overflow-auto hover:text-custom-text focus:bg-custom-accent/20 md:border-0 md:hover:bg-custom-accent/20 "
                                 >
                                     Services
                                 </a>
@@ -83,7 +84,7 @@ const Navigation = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="block py-2 px-3 md:py-0.5 text-custom-text/90 rounded-sm hover:text-custom-text focus:text-custom-text focus:bg-custom-primary/80 md:border-0 md:hover:bg-custom-primary/70 "
+                                    className="block py-2 px-3 md:py-0.5 text-custom-text/90 md:rounded-sm hover:text-custom-text focus:bg-custom-accent/20 md:border-0 md:hover:bg-custom-accent/20 "
                                 >
                                     Pricing
                                 </a>
@@ -91,7 +92,7 @@ const Navigation = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="block py-2 px-3 md:py-0.5 text-custom-text/90 rounded-sm hover:text-custom-text focus:text-custom-text focus:bg-custom-primary/80 md:border-0 md:hover:bg-custom-primary/70 "
+                                    className="block py-2 px-3 md:py-0.5 text-custom-text/90 md:rounded-sm hover:text-custom-text focus:bg-custom-accent/20 md:border-0 md:hover:bg-custom-accent/20 "
                                 >
                                     Contact
                                 </a>
