@@ -6,10 +6,10 @@ const Hero = () => {
         <>
             <section
                 aria-label="about-me"
-                className="inline-block max-w-screen-xl h-dvh mx-auto px-2 place-content-center"
+                className="max-w-screen-xl w-full h-dvh mx-auto mt-2 mb-4 px-2 place-content-center"
             >
                 <div className="flex flex-col px-2 items-center justify-between gap-4 md:grid md:grid-cols-3 md:place-items-center md:gap-8">
-                    <div className="flex flex-col h-full items-center justify-around gap-4 md:gap-8">
+                    <div className="flex flex-col h-full items-center justify-around gap-4 md:gap-2">
                         <span
                             area-label="profile picture"
                             className="size-40 overflow-hidden rounded-full shadow-custom-accent/40 shadow-[0px_0px_15px_0px] "
@@ -33,16 +33,45 @@ const Hero = () => {
                     </div>
 
                     <div className="flex flex-col max-w-xl h-full gap-2 justify-between items-center text-center md:col-span-2 md:items-start">
-                        <span className="font-medium text-2xl text-transparent mt-4 bg-clip-text bg-gradient-to-r from-custom-text via-custom-accent to-custom-text opacity-40 animate-gradient">
-                            frontend developer
+                        <span
+                            className="font-medium text-2xl text-transparent md:mt-4 bg-clip-text bg-gradient-to-r from-custom-text via-custom-accent to-custom-text opacity-40 animate-gradient"
+                            aria-label="Career Profile"
+                        >
+                            Frontend Developer
                         </span>
-                        <h1 className="text-pretty">Kevin Sierra Rodriguez</h1>
+                        <h1 className="text-pretty md:text-left">
+                            Kevin Sierra Rodriguez
+                        </h1>
                         <p className="text-balance md:text-left">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Nemo distinctio reiciendis officiis rem
-                            necessitatibus, alias et cupiditate, molestias
-                            perspiciatis, optio aut facere dicta quae
-                            voluptatibus quisquam enim sunt temporibus fuga.
+                            I focus on{" "}
+                            <i className="text-red-800 dark:text-red-200">
+                                building clean
+                            </i>{" "}
+                            and
+                            <i className="text-green-800 dark:text-green-200">
+                                {" "}
+                                efficient{" "}
+                            </i>{" "}
+                            user interfaces with
+                            <strong className="text-blue-700 dark:text-blue-300">
+                                {" "}
+                                React.js{" "}
+                            </strong>
+                            . I'm a collaborative team player, experienced in{" "}
+                            <strong className="text-green-800 dark:text-green-200">
+                                Agile methodologies
+                            </strong>{" "}
+                            and comfortable working in English{" "}
+                            <i className="text-red-800 dark:text-red-300">
+                                (B2 level)
+                            </i>{" "}
+                            with international teams. <br />
+                            <br />
+                            <i className="text-custom-text/80">
+                                I'm always learning; right now, I'm deepening my
+                                knowledge of TypeScript and the latest
+                                ECMAScript features to level up my code quality
+                            </i>
                         </p>
                     </div>
                 </div>
