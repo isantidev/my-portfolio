@@ -33,6 +33,7 @@ const Navigation = () => {
                         <button
                             onClick={toggleTheme}
                             className="size-8 rounded-full cursor-pointer bg-custom-primary/40 hover:bg-custom-accent/20 hover:shadow-sm hover:shadow-custom-text/20"
+
                         >
                             {theme === "light" ? (
                                 <IoMdSunny className="size-4 m-auto" />
