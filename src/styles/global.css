@@ -7,6 +7,11 @@ body,
     height: 100%;
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
 @theme {
     --font-onest: "onest", system-UI, monospace, sans-serif;
     --color-custom-text: var(--color-text);
