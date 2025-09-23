@@ -8,5 +8,6 @@ createRoot(document.getElementById("root")).render(
     <StrictMode>
         <Navigation />
         <Hero />
+        <Hero />
     </StrictMode>
 );
