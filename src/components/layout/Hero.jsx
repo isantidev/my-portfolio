@@ -24,8 +24,8 @@ const Hero = () => {
                             href="#"
                             className="relative py-1 px-3 md:mb-2 text-center text-balance bg-custom-primary/10 rounded-[0.25rem] max-w-fit w-fit hover:animate-pulse opacity-90 transition-all"
                         >
-                            <span class="absolute -top-1 -right-1 size-3 bg-custom-primary animate-ping rounded-full opacity-80"></span>
-                            <span class="absolute -top-1 -right-1 size-3 rounded-full bg-custom-primary"></span>
+                            <span className="absolute -top-1 -right-1 size-3 bg-custom-primary animate-ping rounded-full opacity-80"></span>
+                            <span className="absolute -top-1 -right-1 size-3 rounded-full bg-custom-primary"></span>
                             <span className="text-custom-accent/80">
                                 open to work!
                             </span>
