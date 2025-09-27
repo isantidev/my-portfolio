@@ -26,6 +26,11 @@ body,
     html {
         background-color: var(--color-bg);
         color: var(--color-text);
+        color-scheme: ligth;
+    }
+
+    html.dark {
+        color-scheme: dark;
     }
 
     body {
