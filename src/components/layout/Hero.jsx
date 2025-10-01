@@ -6,7 +6,7 @@ const Hero = () => {
         <>
             <section
                 aria-label="about-me"
-                className="max-w-screen-xl w-full h-screen min-h-full md:min-h-[90vh] xl:min-h-fit xl:my-16  mx-auto px-4 place-content-center"
+                className="py-20 md:h-auto md:py-36 scroll-m-20 w-full mx-auto lg:max-w-screen-xl md:max-w-2xl px-4"
             >
                 <div className="flex flex-col items-center justify-between gap-4 md:grid md:grid-cols-3 md:place-items-center md:gap-8">
                     <div className="flex flex-col h-full items-center justify-around gap-4 md:gap-2">
@@ -36,7 +36,7 @@ const Hero = () => {
                         <h1 className="text-pretty md:text-left">
                             Hey, I'm Kevin Sierra
                         </h1>
-                        <p className="text-balance md:text-left">
+                        <p className="text-balance md:text-left max-w-md">
                             <strong className="text-custom-accent">
                                 {"Software Developer "}
                             </strong>
@@ -49,11 +49,13 @@ const Hero = () => {
                             international teams.
                             <br />
                             <br />
-                            <i className="text-custom-text/60">
-                                Currently strengthening my stack with
-                                TypeScript, testing, and Azure to deliver
-                                modern, enterprise-grade solutions.
-                            </i>
+                            <small>
+                                <i className="text-custom-text/60 ">
+                                    Currently strengthening my stack with
+                                    TypeScript, testing, and Azure to deliver
+                                    modern, enterprise-grade solutions.
+                                </i>
+                            </small>
                         </p>
                     </div>
                 </div>
