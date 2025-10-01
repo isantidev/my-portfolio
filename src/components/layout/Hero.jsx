@@ -27,7 +27,7 @@ const Hero = () => {
                             <span className="absolute -top-1 -right-1 size-3 bg-custom-primary animate-ping rounded-full opacity-80"></span>
                             <span className="absolute -top-1 -right-1 size-3 rounded-full bg-custom-primary"></span>
                             <span className="text-custom-accent/80">
-                                open to work!
+                                Available to work!
                             </span>
                         </a>
                     </div>
