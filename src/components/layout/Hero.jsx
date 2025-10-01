@@ -11,7 +11,7 @@ const Hero = () => {
             >
                 <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
                     <article
-                        className="flex flex-col w-full justify-between items-center text-center 
+                        className="flex flex-col w-full justify-between items-center
                         md:items-start order-2 md:order-1"
                     >
                         <h1 className="text-pretty md:text-left">
