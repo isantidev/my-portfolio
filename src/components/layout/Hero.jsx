@@ -6,7 +6,7 @@ const Hero = () => {
         <>
             <section
                 aria-label="about-me"
-                className="py-24 md:h-auto md:py-36 scroll-m-20 w-full mx-auto lg:max-w-screen-xl md:max-w-2xl px-4"
+                className="py-28 md:h-auto md:py-36 scroll-m-20 w-full mx-auto lg:max-w-screen-xl md:max-w-2xl px-4"
             >
                 <div className="flex flex-col items-center justify-between gap-4 md:grid md:grid-cols-3 md:place-items-center md:gap-8">
                     <div className="flex flex-col h-full items-center justify-around gap-4 md:gap-2">
