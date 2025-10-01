@@ -6,43 +6,25 @@ const Hero = () => {
         <>
             <section
                 aria-label="about-me"
-                className="py-28 md:h-auto md:py-36 scroll-m-20 w-full mx-auto lg:max-w-screen-xl md:max-w-2xl px-4"
+                className="py-20 md:h-auto md:py-36 scroll-m-20 w-full mx-auto md:max-w-2xl lg:max-w-screen-xl px-4"
+                id="Hero"
             >
-                <div className="flex flex-col items-center justify-between gap-4 md:grid md:grid-cols-3 md:place-items-center md:gap-8">
-                    <div className="flex flex-col h-full items-center justify-around gap-4 md:gap-2">
-                        <span
-                            area-label="profile picture"
-                            className="size-40 overflow-hidden rounded-full shadow-custom-accent/40 shadow-[0px_0px_15px_0px] "
-                        >
-                            <img
-                                className="h-full w-full object-cover"
-                                src={profileImg}
-                                alt="Kevin Santiago Sierra Rodriguez's picture"
-                            />
-                        </span>
-                        <a
-                            href="#"
-                            className="relative py-1 px-3 md:mb-2 text-center text-balance bg-custom-primary/10 rounded-[0.25rem] max-w-fit w-fit hover:animate-pulse opacity-90 transition-all"
-                        >
-                            <span className="absolute -top-1 -right-1 size-3 bg-custom-primary animate-ping rounded-full opacity-80"></span>
-                            <span className="absolute -top-1 -right-1 size-3 rounded-full bg-custom-primary"></span>
-                            <span className="text-custom-accent/80">
-                                Available to work!
-                            </span>
-                        </a>
-                    </div>
-
-                    <div className="flex flex-col max-w-xl h-full gap-2 justify-between items-center text-center md:col-span-2 md:items-start">
+                <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+                    <article
+                        className="flex flex-col w-full justify-between items-center text-center 
+                        md:items-start order-2 md:order-1"
+                    >
                         <h1 className="text-pretty md:text-left">
                             Hey, I'm Kevin Sierra
                         </h1>
-                        <p className="text-balance md:text-left max-w-md">
+                        <br />
+                        <p className="text-balance text-xl md:text-left max-w-lg">
                             <strong className="text-custom-accent">
                                 {"Software Developer "}
                             </strong>
                             focused on building reliable, high-quality
                             applications with
-                            <strong className="text-[#61DBFB]">
+                            <strong className="text-[#60dafb]">
                                 {" React.js"}
                             </strong>
                             . Skilled in Agile collaboration and effective in
@@ -57,6 +39,29 @@ const Hero = () => {
                                 </i>
                             </small>
                         </p>
+                    </article>
+
+                    <div className="flex flex-col h-fit gap-8 items-center md:mx-16 order-1">
+                        <span
+                            area-label="profile picture"
+                            className="size-40 overflow-hidden rounded-full shadow-custom-accent/40 shadow-[0px_0px_15px_0px] "
+                        >
+                            <img
+                                className="h-full w-full object-cover"
+                                src={profileImg}
+                                alt="Kevin Santiago Sierra Rodriguez's picture"
+                            />
+                        </span>
+                        <a
+                            href="#"
+                            className="relative py-1 px-3 text-center text-balance bg-custom-primary/10 rounded-sm max-w-fit w-fit hover:animate-pulse opacity-90 transition-all"
+                        >
+                            <span className="absolute -top-1 -right-1 size-3 bg-custom-primary animate-ping rounded-full opacity-80"></span>
+                            <span className="absolute -top-1 -right-1 size-3 rounded-full bg-custom-primary"></span>
+                            <span className="text-custom-accent/80 text-lg">
+                                Available to work!
+                            </span>
+                        </a>
                     </div>
                 </div>
             </section>
