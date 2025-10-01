@@ -5,6 +5,7 @@ html,
 body,
 #root {
     height: 100%;
+    font-family: var(--font-onest);
 }
 
 #root {
@@ -13,7 +14,7 @@ body,
 }
 
 @theme {
-    --font-onest: "onest", system-UI, monospace, sans-serif;
+    --font-onest: "Onest Variable", system-UI, monospace, sans-serif;
     --color-custom-text: var(--color-text);
     --color-custom-bg: var(--color-bg);
     --color-custom-primary: var(--color-primary);
@@ -58,7 +59,7 @@ body,
 
 /* #region Typography */
 @font-face {
-    font-family: "onest";
+    font-family: "Onest Variable";
     font-style: normal;
     font-display: swap;
     font-weight: 100 900;
@@ -69,6 +70,7 @@ body,
 
 h1 {
     font-size: clamp(2rem, 5vw, 3rem);
+    font-family: var(--font-onest);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.02em;
@@ -120,14 +122,6 @@ h6 {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-p {
-    font-size: clamp(0.75rem, 2vw, 1.125rem);
-    font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0.002em;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 a {
     font-size: inherit;
     font-weight: inherit;
@@ -148,10 +142,6 @@ button {
     text-decoration-thickness: 0.08em;
     text-underline-offset: 0.15em;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-a:hover {
-    text-underline-offset: 0.12em;
 }
 
 /* Mobile optimizations */
@@ -186,11 +176,6 @@ a:hover {
         letter-spacing: -0.002em;
     }
 
-    p {
-        font-size: 0.9rem;
-        line-height: 1.65;
-    }
-
     a {
         text-decoration-thickness: 0.1em;
         text-underline-offset: 0.12em;
@@ -199,11 +184,6 @@ a:hover {
     button {
         text-decoration-thickness: 0.1em;
         text-underline-offset: 0.12em;
-    }
-
-    a:hover {
-        text-decoration-thickness: 0.14em;
-        text-underline-offset: 0.1em;
     }
 }
 /* #endregion */
