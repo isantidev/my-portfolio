@@ -37,10 +37,16 @@ const Hero = () => {
                             Hey, I'm Kevin Sierra
                         </h1>
                         <p className="text-balance md:text-left">
-                            <strong>Software Developer</strong> focused on
-                            building reliable, high-quality applications with
-                            <strong> React.js</strong>. Skilled in Agile
-                            collaboration and effective in international teams.
+                            <strong className="text-custom-accent">
+                                {"Software Developer "}
+                            </strong>
+                            focused on building reliable, high-quality
+                            applications with
+                            <strong className="text-[#61DBFB]">
+                                {" React.js"}
+                            </strong>
+                            . Skilled in Agile collaboration and effective in
+                            international teams.
                             <br />
                             <br />
                             <i className="text-custom-text/60">
