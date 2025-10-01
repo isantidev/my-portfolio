@@ -44,16 +44,16 @@ body,
     :root {
         --color-text: #121212;
         --color-bg: #f5f5f5;
-        --color-primary: #475421;
+        --color-primary: #67860a;
         --color-secondary: #e6e6e6;
-        --color-accent: #1e3601;
+        --color-accent: #345d01;
     }
     .dark {
         --color-text: #fefefe;
         --color-bg: #0a0a0a;
-        --color-primary: #586343;
+        --color-primary: #469955;
         --color-secondary: #1c1d1a;
-        --color-accent: #aeff4c;
+        --color-accent: #76ff4c;
     }
 }
 
