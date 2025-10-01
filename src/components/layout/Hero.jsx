@@ -33,44 +33,20 @@ const Hero = () => {
                     </div>
 
                     <div className="flex flex-col max-w-xl h-full gap-2 justify-between items-center text-center md:col-span-2 md:items-start">
-                        <span
-                            className="font-medium text-2xl text-transparent md:mt-4 bg-clip-text bg-gradient-to-r from-custom-text via-custom-accent to-custom-text opacity-40 animate-gradient"
-                            aria-label="Career Profile"
-                        >
-                            Frontend Developer
-                        </span>
                         <h1 className="text-pretty md:text-left">
-                            Kevin Sierra Rodriguez
+                            Hey, I'm Kevin Sierra
                         </h1>
                         <p className="text-balance md:text-left">
-                            I focus on{" "}
-                            <i className="text-red-800 dark:text-red-200">
-                                building clean
-                            </i>{" "}
-                            and
-                            <i className="text-green-800 dark:text-green-200">
-                                {" "}
-                                efficient{" "}
-                            </i>{" "}
-                            user interfaces with
-                            <strong className="text-blue-700 dark:text-blue-300">
-                                {" "}
-                                React.js{" "}
-                            </strong>
-                            . I'm a collaborative team player, experienced in{" "}
-                            <strong className="text-green-800 dark:text-green-200">
-                                Agile methodologies
-                            </strong>{" "}
-                            and comfortable working in English{" "}
-                            <i className="text-red-800 dark:text-red-300">
-                                (B2 level)
-                            </i>{" "}
-                            with international teams. <br />
+                            <strong>Software Developer</strong> focused on
+                            building reliable, high-quality applications with
+                            <strong> React.js</strong>. Skilled in Agile
+                            collaboration and effective in international teams.
                             <br />
-                            <i className="text-custom-text/80">
-                                I'm always learning; right now, I'm deepening my
-                                knowledge of TypeScript and the latest
-                                ECMAScript features to level up my code quality
+                            <br />
+                            <i className="text-custom-text/60">
+                                Currently strengthening my stack with
+                                TypeScript, testing, and Azure to deliver
+                                modern, enterprise-grade solutions.
                             </i>
                         </p>
                     </div>
