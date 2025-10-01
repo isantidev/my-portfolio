@@ -2,7 +2,7 @@ const Experience = () => {
     return (
         <>
             <section
-                className="scroll-m-20 w-full mx-auto lg:max-w-screen-xl md:max-w-2xl px-4"
+                className="scroll-m-20 w-full mx-auto md:max-w-2xl lg:max-w-screen-xl px-4"
                 id="Experience"
             >
                 <h2>Experience</h2>
