@@ -2,8 +2,8 @@ const Experience = () => {
     return (
         <>
             <section
-                className="max-w-screen-xl w-full mx-auto px-4 min-h-screen mt-12 md:mt-16"
-                id="experience"
+                className="scroll-m-20 w-full mx-auto lg:max-w-screen-xl md:max-w-2xl px-4"
+                id="Experience"
             >
                 <h2>Experience</h2>
                 <div className="w-full flex flex-col gap-4">
