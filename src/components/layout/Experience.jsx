@@ -1,4 +1,13 @@
+import { useState } from "react";
+import { IoBriefcaseSharp } from "react-icons/io5";
+
 const Experience = () => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const showMoreInfo = () => {
+        setIsExpanded(!isExpanded);
+    };
+
     return (
         <>
             <section
@@ -6,7 +15,12 @@ const Experience = () => {
                 md:max-w-2xl"
                 id="Experience"
             >
-                <h2>Experience</h2>
+                <header className="inline-flex gap-2">
+                    <span>
+                        <IoBriefcaseSharp className="size-4" />
+                    </span>
+                    <h2>Experience</h2>
+                </header>
 
                 <article
                     tabIndex={0}
@@ -25,18 +39,35 @@ const Experience = () => {
                             Feb 2025 - Aug 2025
                         </span>
                     </div>
-                    <ul
-                        className="*:text-lg list-disc pl-6
-                        md:pl-8"
-                    >
-                        <li></li>
-                        <li>
-                            Assisted in troubleshooting hardware and software
-                            issues
-                        </li>
-                        <li>Provided technical support to end-users</li>
-                        <li>Participated in IT projects and initiatives</li>
-                    </ul>
+                    <p className="text-lg">
+                        Developed and optimized a custom Linux bootable system,
+                        achieving a 40% reduction in ISO size (2.7 GB to 1.6 GB)
+                        and 37% faster boot times through terminal-based
+                        configuration.{" "}
+                        <span className="sr-only">Show more info</span>
+                        <span
+                            className={isExpanded === true ? "block" : "hidden"}
+                        >
+                            {" "}
+                            Performed system hardening, ensured cross-platform
+                            compatibility with Ventoy and Rufus, and created
+                            comprehensive technical documentation. Delivered
+                            technical support and troubleshooting while
+                            contributing to IT projects and system improvements.
+                        </span>
+                        <button
+                            className={
+                                isExpanded === false
+                                    ? "block font-light text-custom-primary/80 mt-1"
+                                    : "block font-light text-custom-primary/80 mt-1"
+                            }
+                            onClick={showMoreInfo}
+                        >
+                            {isExpanded === true
+                                ? "< Read less"
+                                : "Read more >"}
+                        </button>
+                    </p>
                 </article>
             </section>
         </>
