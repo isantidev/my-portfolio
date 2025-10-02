@@ -11,13 +11,13 @@ const Experience = () => {
     return (
         <>
             <section
-                className="scroll-m-20 w-full mx-auto flex flex-col gap-2 lg:max-w-screen-xl px-4 pb-20
+                className="scroll-m-20 w-full mx-auto flex flex-col gap-4 lg:max-w-screen-xl px-4 pb-20
                 md:max-w-2xl"
                 id="Experience"
             >
-                <header className="inline-flex gap-2">
-                    <span>
-                        <IoBriefcaseSharp className="size-4" />
+                <header className="inline-flex gap-2 align-middle">
+                    <span className="size-8 place-content-center p-1 *:mx-auto *:size-full">
+                        <IoBriefcaseSharp />
                     </span>
                     <h2>Experience</h2>
                 </header>
@@ -27,7 +27,7 @@ const Experience = () => {
                     className="grid gap-4 p-2 rounded-sm hover:bg-custom-secondary focus:bg-custom-secondary transition ease-in-out
                     md:p-4 lg:py-8 lg:px-14 md:grid-cols-2"
                 >
-                    <div className="relative flex flex-col">
+                    <div className="relative flex flex-col gap-1">
                         <h4 className="text-custom-primary">
                             Desktop Support IT
                         </h4>
