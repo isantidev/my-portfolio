@@ -12,6 +12,5 @@ createRoot(document.getElementById("root")).render(
         <Navigation />
         <Hero />
         <Experience />
-        <Stack />
     </StrictMode>
 );
