@@ -1,4 +1,4 @@
-import { CardProject } from "/src/components/ui/Card.jsx";
+import { CardProject } from "@ui/Card.jsx";
 
 const Projects = () => {
     return (

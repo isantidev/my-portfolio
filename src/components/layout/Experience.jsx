@@ -1,5 +1,5 @@
 import { IoBriefcaseSharp } from "react-icons/io5";
-import { CardJob } from "/src/components/ui/Card.jsx";
+import { CardJob } from "@ui/Card.jsx";
 
 const Experience = () => {
     return (
