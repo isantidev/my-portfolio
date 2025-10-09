@@ -51,3 +51,5 @@ export const CardJob = ({ title, enterprise, time, description }) => {
         </>
     );
 };
+
+export const CardProject = () => {};
