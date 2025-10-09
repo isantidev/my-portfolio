@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Card = ({ title, enterprise, time, description }) => {
+export const CardJob = ({ title, enterprise, time, description }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const showMoreInfo = () => {
@@ -51,5 +51,3 @@ const Card = ({ title, enterprise, time, description }) => {
         </>
     );
 };
-
-export default Card;

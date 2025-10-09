@@ -1,5 +1,5 @@
 import { IoBriefcaseSharp } from "react-icons/io5";
-import Card from "/src/components/ui/Card.jsx";
+import { CardJob } from "/src/components/ui/Card.jsx";
 
 const Experience = () => {
     return (
@@ -16,11 +16,11 @@ const Experience = () => {
                     <h2>Experience</h2>
                 </header>
 
-                <Card
+                <CardJob
                     title={"Desktop Support IT"}
                     enterprise={"TP S.A.S."}
                     time={"Feb 2025 - Aug 2025"}
-                    description={`Developed and optimized a custom Linux bootable system, achieving a 40% reduction in ISO size (2.7 GB to 1.6 GB)and 37% faster boot times through terminal-based configuration. Performed system hardening, ensured cross-platform compatibility with Ventoy and Rufus, and created comprehensive technical documentation. Delivered technical support and troubleshooting while contributing to IT projects and system improvements.`}
+                    description={`Developed and optimized a custom Linux bootable system, achieving a 40% reduction in ISO size (2.7 GB to 1.6 GB) and 37% faster boot times through terminal-based configuration. Performed system hardening, ensured cross-platform compatibility with Ventoy and Rufus, and created comprehensive technical documentation. Delivered technical support and troubleshooting while contributing to IT projects and system improvements.`}
                 />
             </section>
         </>
