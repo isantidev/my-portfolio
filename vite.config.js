@@ -12,6 +12,7 @@ export default defineConfig({
             "@icons": "/src/assets/icons",
             "@layout": "/src/components/layout",
             "@hooks": "/src/components/hooks",
+            "@ui": "/src/components/ui",
         },
     },
 });
