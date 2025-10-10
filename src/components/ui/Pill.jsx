@@ -1,8 +1,8 @@
-const Pill = ({ key, text }) => {
+const Pill = ({ keyName, text }) => {
     return (
         <>
             <li
-                key={key}
+                key={keyName}
                 className="py-1.5 px-4 text-md font-extralight bg-custom-accent/20 rounded-md lowercase"
             >
                 {text}
