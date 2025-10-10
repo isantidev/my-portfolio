@@ -20,9 +20,13 @@ const Projects = () => {
                 md:max-w-2xl"
                 id="Projects"
             >
+                <header className="inline-flex gap-2 align-middle">
+                    <span className="w-8 h-full p-1 *:w-full flex justify-center">
+                        <IoBriefcaseSharp className="my-auto size-full" />
+                    </span>
+                    <h2>Experience</h2>
+                </header>
                 <ul className="grid grid-cols-1 grid-flow-row md:grid-cols-2 [&>:first-child]:md:col-span-2 lg:grid-cols-3 [&>:first-child]:lg:col-span-1  gap-4">
-                    <CardProject {...stocksoft} />
-                    <CardProject {...stocksoft} />
                     <CardProject {...stocksoft} />
                 </ul>
             </section>
