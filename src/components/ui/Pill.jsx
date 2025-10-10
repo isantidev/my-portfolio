@@ -3,7 +3,7 @@ const Pill = ({ keyName, text }) => {
         <>
             <li
                 key={keyName}
-                className="py-1.5 px-4 text-md font-extralight bg-custom-accent/20 rounded-md lowercase"
+                className="py-1.5 px-4 text-md font-extralight bg-custom-secondary/40 rounded-md lowercase"
             >
                 {text}
             </li>

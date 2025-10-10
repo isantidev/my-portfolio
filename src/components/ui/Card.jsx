@@ -85,9 +85,21 @@ export const CardProject = (project) => {
                         })}
                     </ul>
                 </div>
-                <button className="p-2 max-w-2/3 mt-4 bg-custom-primary/40 rounded-sm capitalize">
-                    {project.status === "Live" ? "View project" : "Preview"}
-                </button>
+                <div className="@container">
+                    <div className="flex flex-wrap justify-between max-h-10 mt-4 gap-2 @xs:flex-nowrap @sm:max-h-10">
+                        <button className="p-2 size-full bg-custom-primary/40 rounded-sm capitalize">
+                            {project.status === "Live"
+                                ? "View project"
+                                : "Preview"}
+                        </button>
+                        <button className="p-2 size-full bg-custom-secondary/40 rounded-sm capitalize [&_svg]:size-3 inline-flex gap-2 items-center justify-center">
+                            <svg>
+                                <use href="/src/assets/icons/sprite.svg#github"></use>
+                            </svg>
+                            View code
+                        </button>
+                    </div>
+                </div>
             </article>
         </>
     );
