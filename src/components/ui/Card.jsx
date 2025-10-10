@@ -55,7 +55,7 @@ export const CardJob = ({ title, enterprise, time, description }) => {
 export const CardProject = (project) => {
     return (
         <>
-            <article className="w-full py-6 px-8 rounded-sm shadow-custom-primary/20 shadow-[0px_0px_15px_0px] flex flex-col gap-2">
+            <article className="w-full py-6 px-8 rounded-sm shadow-custom-primary/20 shadow-[0px_0px_15px_0px] flex flex-col gap-2.5">
                 <figure className="w-full rounded-sm flex flex-col justify-between">
                     <img
                         src={project.image.src}
@@ -73,12 +73,12 @@ export const CardProject = (project) => {
                 <h3 className="text-custom-primary leading-5">
                     {project.title}
                 </h3>
-                <p className="leading-6 font-light text-md">
+                <p className="leading-6 font-light text-lg text-pretty">
                     {project.description}
                 </p>
                 <div className="w-full h-fit">
                     <h5 className="text-custom-text/90">Technology Stack</h5>
-                    <ul className="flex flex-wrap gap-4 gap-y-1">
+                    <ul className="flex flex-wrap gap-4 gap-y-1 [&_li]:text-md">
                         {project.stack.map((item) => {
                             return <li key={item}>{item}</li>;
                         })}
