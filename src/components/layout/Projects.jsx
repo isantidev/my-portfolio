@@ -7,7 +7,8 @@ const stocksoft = {
         description: "Image CRUD proffesional project",
     },
     stack: ["php", "mysql", "javascript", "apache"],
-    description: "CRUD proffesional project",
+    description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil necessitatibus recusandae eligendi voluptatibus explicabo dolorum repudiandae quam, velit assumenda? A temporibus minima sequi eaque eum suscipit labore soluta reprehenderit perferendis.",
     status: "preview",
 };
 

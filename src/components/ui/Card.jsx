@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Pill from "@ui/Pill.jsx";
 
 export const CardJob = ({ title, enterprise, time, description }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -80,7 +81,7 @@ export const CardProject = (project) => {
                     <h5 className="text-custom-text/90">Technology Stack</h5>
                     <ul className="flex flex-wrap gap-4 gap-y-1 [&_li]:text-md">
                         {project.stack.map((item) => {
-                            return <li key={item}>{item}</li>;
+                            return <Pill key={item} text={item} />;
                         })}
                     </ul>
                 </div>
