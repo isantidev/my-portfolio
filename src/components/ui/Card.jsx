@@ -77,9 +77,9 @@ export const CardProject = (project) => {
                 <p className="leading-6 font-light text-lg text-pretty">
                     {project.description}
                 </p>
-                <div className="w-full h-fit">
+                <div className="w-full h-fit flex flex-col gap-2">
                     <h5 className="text-custom-text/90">Technology Stack</h5>
-                    <ul className="flex flex-wrap gap-4 gap-y-1 [&_li]:text-md">
+                    <ul className="flex flex-wrap gap-2 [&_li]:text-md">
                         {project.stack.map((item) => {
                             return <Pill key={item} text={item} />;
                         })}
