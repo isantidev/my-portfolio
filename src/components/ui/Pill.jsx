@@ -1,7 +1,10 @@
-const Pill = ({ text }) => {
+const Pill = ({ key, text }) => {
     return (
         <>
-            <li className="py-1.5 px-4 text-lg bg-custom-accent/40 capitalize">
+            <li
+                key={key}
+                className="py-1.5 px-3 text-md bg-custom-accent/20 rounded-md capitalize"
+            >
                 {text}
             </li>
         </>
