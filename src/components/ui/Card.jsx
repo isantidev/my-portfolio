@@ -97,7 +97,7 @@ export const CardProject = (project) => {
                                 project.source ||
                                 "https://www.github.com/isantidev"
                             }
-                            className="p-2 w-12 bg-custom-secondary/40 rounded-sm capitalize [&_svg]:size-full inline-flex gap-4 items-center justify-center cursor-pointer @xs:w-full @xs:[&_svg]:size-4"
+                            className="p-2 w-12 bg-custom-text/90 dark:bg-custom-text/10 rounded-sm capitalize [&_svg]:size-full inline-flex gap-4 items-center justify-center cursor-pointer @xs:w-full @xs:[&_svg]:size-4"
                         >
                             <svg>
                                 <use href="/src/assets/icons/sprite.svg#github"></use>

@@ -20,8 +20,7 @@ const Projects = () => {
                 md:max-w-2xl"
                 id="Projects"
             >
-                <ul className="grid grid-cols-1 grid-flow-row md:grid-cols-3 [&>:first-child]:md:col-span-2  gap-4">
-                    <CardProject {...stocksoft} />
+                <ul className="grid grid-cols-1 grid-flow-row md:grid-cols-2 [&>:first-child]:md:col-span-2 lg:grid-cols-3 [&>:first-child]:lg:col-span-1  gap-4">
                     <CardProject {...stocksoft} />
                     <CardProject {...stocksoft} />
                     <CardProject {...stocksoft} />
