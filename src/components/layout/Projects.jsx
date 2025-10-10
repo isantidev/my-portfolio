@@ -8,7 +8,7 @@ const stocksoft = {
     },
     stack: ["php", "mysql", "javascript", "apache"],
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil necessitatibus recusandae eligendi voluptatibus explicabo dolorum repudiandae quam, velit assumenda? A temporibus minima sequi eaque eum suscipit labore soluta reprehenderit perferendis.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil necessitatibus recusandae eligendi voluptatibus explicabo dolorum repudiandae quam, velit assumenda?",
     status: "preview",
 };
 
@@ -20,9 +20,12 @@ const Projects = () => {
                 md:max-w-2xl"
                 id="Projects"
             >
-                <div>
+                <ul className="grid grid-cols-1 grid-flow-row md:grid-cols-3 [&>:first-child]:md:col-span-2  gap-4">
                     <CardProject {...stocksoft} />
-                </div>
+                    <CardProject {...stocksoft} />
+                    <CardProject {...stocksoft} />
+                    <CardProject {...stocksoft} />
+                </ul>
             </section>
         </>
     );
