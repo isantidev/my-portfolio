@@ -86,18 +86,26 @@ export const CardProject = (project) => {
                     </ul>
                 </div>
                 <div className="@container">
-                    <div className="flex flex-wrap justify-between max-h-10 mt-4 gap-2 @xs:flex-nowrap @sm:max-h-10">
+                    <div className="flex justify-between max-h-10 mt-4 gap-2">
                         <button className="p-2 size-full bg-custom-primary/40 rounded-sm capitalize">
                             {project.status === "Live"
                                 ? "View project"
                                 : "Preview"}
                         </button>
-                        <button className="p-2 size-full bg-custom-secondary/40 rounded-sm capitalize [&_svg]:size-3 inline-flex gap-2 items-center justify-center">
+                        <a
+                            href={
+                                project.source ||
+                                "https://www.github.com/isantidev"
+                            }
+                            className="p-2 w-12 bg-custom-secondary/40 rounded-sm capitalize [&_svg]:size-full inline-flex gap-4 items-center justify-center cursor-pointer @xs:w-full @xs:[&_svg]:size-4"
+                        >
                             <svg>
                                 <use href="/src/assets/icons/sprite.svg#github"></use>
                             </svg>
-                            View code
-                        </button>
+                            <span className="sr-only @xs:not-sr-only">
+                                View code
+                            </span>
+                        </a>
                     </div>
                 </div>
             </article>
