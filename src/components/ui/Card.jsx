@@ -52,4 +52,22 @@ export const CardJob = ({ title, enterprise, time, description }) => {
     );
 };
 
-export const CardProject = () => {};
+export const CardProject = (project) => {
+    return (
+        <>
+            <article>
+                <figure>
+                    <img
+                        src={project.image.src}
+                        alt={project.image.description}
+                    />
+                    <span>{project.image.description}</span>
+                </figure>
+                <h4>{project.title}</h4>
+                <ul>{project.stack}</ul>
+                <p>{project.description}</p>
+                <button>{project.status}</button>
+            </article>
+        </>
+    );
+};
