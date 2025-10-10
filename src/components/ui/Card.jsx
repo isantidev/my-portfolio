@@ -60,7 +60,7 @@ export const CardProject = (project) => {
                 <figure className="w-full rounded-sm flex flex-col justify-between">
                     <img
                         src={project.image.src}
-                        alt={project.image.description}
+                        alt={project.image.caption}
                         loading="lazy"
                         className="p-2 aspect-[4/3] max-h-60 rounded-t-sm object-cover overflow-hidden bg-custom-secondary/40"
                     />
@@ -68,7 +68,7 @@ export const CardProject = (project) => {
                         aria-label="imageCaption"
                         className="block text-custom-text/60 font-light text-sm text-center py-3 px-auto"
                     >
-                        {project.image.description}
+                        {project.image.caption}
                     </span>
                 </figure>
                 <h3 className="text-custom-primary leading-5">
