@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Pill from "@ui/Pill.jsx";
-import icons from "@assets/icons/sprite.svg";
+import icons from "@icons/sprite.svg";
 
 export const CardJob = ({ title, enterprise, time, description }) => {
     const [isExpanded, setIsExpanded] = useState(false);
