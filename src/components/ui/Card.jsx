@@ -57,12 +57,12 @@ export const CardProject = (project) => {
     return (
         <>
             <article className="w-full py-6 px-8 rounded-sm shadow-custom-primary/20 shadow-[0px_0px_15px_0px] flex flex-col gap-2.5">
-                <figure className="w-full rounded-sm flex flex-col justify-between">
+                <figure className="w-11/12 max-h-72 mx-auto rounded-sm flex flex-col justify-between ">
                     <img
                         src={project.image.src}
                         alt={project.image.caption}
                         loading="lazy"
-                        className="p-2 aspect-[4/3] max-h-60 rounded-t-sm object-cover overflow-hidden bg-custom-secondary/40"
+                        className="p-2 aspect-4/3 rounded-t-sm object-contain overflow-hidden bg-custom-secondary/40"
                     />
                     <span
                         aria-label="imageCaption"
@@ -97,6 +97,8 @@ export const CardProject = (project) => {
                                 project.source ||
                                 "https://www.github.com/isantidev"
                             }
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="p-2 w-12 bg-custom-text/90 dark:bg-custom-text/10 text-custom-bg dark:text-custom-text rounded-sm capitalize [&_svg]:size-full inline-flex gap-4 items-center justify-center cursor-pointer @xs:w-full @xs:[&_svg]:size-4"
                         >
                             <svg>
