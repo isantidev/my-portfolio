@@ -1,10 +1,11 @@
 import { CardProject } from "@ui/Card.jsx";
 import { IoBook } from "react-icons/io5";
+import stocksoftPreview from "@images/project-stocksoft.webp";
 
 const stocksoft = {
     title: "Stocksoft",
     image: {
-        src: "src/assets/images/project-stocksoft.webp",
+        src: stocksoftPreview,
         caption: "Stocksoft - Inventory Management System Preview",
     },
     stack: ["php", "javascript", "css", "mysql", "apache"],
