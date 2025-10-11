@@ -1,4 +1,5 @@
 import { CardProject } from "@ui/Card.jsx";
+import { IoBook } from "react-icons/io5";
 
 const stocksoft = {
     title: "Stocksoft",
@@ -6,9 +7,9 @@ const stocksoft = {
         src: "https://imgs.search.brave.com/SWzRUgE9xIahxmKEl5qsvFfZ3opwOiig6rjmhOsBd-4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dHV0b3JpYWxyZXB1/YmxpYy5jb20vc25p/cHBldHMvZGVzaWdu/cy90YWJsZS13aXRo/LWFkZC1hbmQtZGVs/ZXRlLXJvdy1mZWF0/dXJlLnBuZw",
         caption: "Stocksoft - Inventory Management System Preview",
     },
-    stack: ["php", "mysql", "javascript", "apache"],
+    stack: ["php", "javascript", "css", "mysql", "apache"],
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil necessitatibus recusandae eligendi voluptatibus explicabo dolorum repudiandae quam, velit assumenda?",
+        "Stocksoft is a web-based inventory management system built with a PHP backend, styled with CSS, and enhanced by JavaScript components. It helps businesses keep track of products, manage stock data, and streamline product organization with a structured, user-friendly interface.",
     status: "preview",
 };
 
@@ -22,11 +23,12 @@ const Projects = () => {
             >
                 <header className="inline-flex gap-2 align-middle">
                     <span className="w-8 h-full p-1 *:w-full flex justify-center">
-                        <IoBriefcaseSharp className="my-auto size-full" />
+                        <IoBook className="my-auto size-full" />
                     </span>
-                    <h2>Experience</h2>
+                    <h2>Projects</h2>
                 </header>
-                <ul className="grid grid-cols-1 grid-flow-row md:grid-cols-2 [&>:first-child]:md:col-span-2 lg:grid-cols-3 [&>:first-child]:lg:col-span-1  gap-4">
+
+                <ul className="grid grid-cols-1 grid-flow-row md:grid-cols-2 [&>:first-child]:md:col-span-2 lg:grid-cols-3  gap-4">
                     <CardProject {...stocksoft} />
                 </ul>
             </section>
