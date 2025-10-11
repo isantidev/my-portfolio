@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Pill from "@ui/Pill.jsx";
+import icons from "@assets/icons/sprite.svg";
 
 export const CardJob = ({ title, enterprise, time, description }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -102,7 +103,7 @@ export const CardProject = (project) => {
                             className="p-2 w-12 bg-custom-text/90 dark:bg-custom-text/10 text-custom-bg dark:text-custom-text rounded-sm capitalize [&_svg]:size-full inline-flex gap-4 items-center justify-center cursor-pointer @xs:w-full @xs:[&_svg]:size-4"
                         >
                             <svg>
-                                <use href="/src/assets/icons/sprite.svg#github"></use>
+                                <use href={`${icons}#github`}></use>
                             </svg>
                             <span className="sr-only @xs:not-sr-only">
                                 View code
