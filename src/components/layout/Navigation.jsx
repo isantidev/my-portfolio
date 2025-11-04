@@ -1,27 +1,10 @@
-import { useState, useEffect } from "react";
-import { IoMdSunny } from "react-icons/io";
-import { IoMdMoon } from "react-icons/io";
-import { IoMenu } from "react-icons/io5";
-import { IoClose } from "react-icons/io5";
+import { useState } from "react";
+import { useTheme } from "@context/ThemeContext";
+import { IoMdSunny, IoMdMoon } from "react-icons/io";
+import { IoMenu, IoClose } from "react-icons/io5";
 
 const Navigation = () => {
-    const userTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-
-    useEffect(() => {
-        document.documentElement.classList.toggle("dark", userTheme === "dark");
-    }, [userTheme]);
-
-    const [theme, setTheme] = useState(userTheme);
-
-    const toggleTheme = () => {
-        const newTheme = theme === "light" ? "dark" : "light";
-        setTheme(newTheme);
-
-        document.documentElement.classList.toggle("dark", newTheme === "dark");
-    };
-
+    const { theme, toggleTheme } = useTheme();
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleNavbar = () => {
