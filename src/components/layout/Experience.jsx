@@ -5,8 +5,7 @@ const Experience = () => {
     return (
         <>
             <section
-                className="scroll-m-20 w-full mx-auto flex flex-col gap-4 lg:max-w-screen-xl px-4 pb-20
-                md:max-w-2xl"
+                className="scroll-m-20 w-full flex flex-col gap-4"
                 id="Experience"
             >
                 <header className="inline-flex gap-2 align-middle">

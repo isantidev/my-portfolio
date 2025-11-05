@@ -5,7 +5,7 @@ import Stack from "@layout/Stack.jsx";
 
 const App = () => {
     return (
-        <div className="flex flex-col mx-auto lg:max-w-screen-xl px-4 pb-20">
+        <div className="flex flex-col mx-auto max-w-screen md:max-w-3xl lg:max-w-screen-xl px-4 pb-20">
             <Hero />
             <Experience />
             <Projects />
