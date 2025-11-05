@@ -1,4 +1,5 @@
 import profileImg from "@images/isantidev-vert.webp";
+import Stack from "@layout/Stack.jsx";
 import "@styles/keyframes.css";
 
 const Hero = () => {
@@ -64,6 +65,7 @@ const Hero = () => {
                         </a>
                     </div>
                 </div>
+                <Stack />
             </section>
         </>
     );
