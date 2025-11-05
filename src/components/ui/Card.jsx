@@ -57,7 +57,7 @@ export const CardProject = (project) => {
     return (
         <>
             <article className="w-full py-6 px-8 rounded-sm shadow-custom-primary/20 shadow-[0px_0px_15px_0px] flex flex-col gap-2.5">
-                <figure className="w-11/12 max-h-72 mx-auto rounded-sm flex flex-col justify-between ">
+                <figure className="shrink max-h-72 mx-auto rounded-sm flex flex-col justify-between ">
                     <img
                         src={project.image.src}
                         alt={project.image.caption}

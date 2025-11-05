@@ -18,7 +18,7 @@ const Projects = () => {
     return (
         <>
             <section
-                className="scroll-m-20 w-full mx-auto flex flex-col gap-4 "
+                className="scroll-m-20 w-full flex flex-col gap-4 "
                 id="Projects"
             >
                 <header className="inline-flex gap-2 align-middle">
