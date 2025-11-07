@@ -7,7 +7,7 @@ const Hero = () => {
         <>
             <section
                 aria-label="about-me"
-                className="pt-20 md:h-auto md:pt-36 md:pb-20 scroll-m-20 w-full px-4"
+                className="flex flex-col gap-4 lg:gap-8 pt-20 md:h-auto md:pt-36 md:pb-20 scroll-m-20 w-full px-4"
                 id="Hero"
             >
                 <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
@@ -20,14 +20,17 @@ const Hero = () => {
                         </h1>
                         <br />
                         <p className="text-balance text-xl md:text-left max-w-lg">
-                            <strong className="text-custom-accent">
+                            <strong className="text-custom-accent/80">
                                 {"Software Developer "}
                             </strong>
                             focused on building reliable, high-quality
                             applications with
                             <strong className="text-[#60dafb]">
-                                {" React.js"}
+                                {" React"}
                             </strong>
+                            ,<strong className="text-[#f0db4f]">{" Js"}</strong>
+                            {" and"}
+                            <strong className="text-[#3178c6]">{" Ts"}</strong>
                             . Skilled in Agile collaboration and effective in
                             international teams.
                             <br />
