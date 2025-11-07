@@ -1,6 +1,7 @@
 import Hero from "@layout/Hero.jsx";
 import Experience from "@layout/Experience.jsx";
 import Projects from "@layout/Projects.jsx";
+import Contact from "@layout/Contact";
 
 const App = () => {
     return (
@@ -8,6 +9,7 @@ const App = () => {
             <Hero />
             <Experience />
             <Projects />
+            <Contact />
         </div>
     );
 };
