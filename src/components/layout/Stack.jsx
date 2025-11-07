@@ -44,8 +44,8 @@ const Stack = () => {
                             uniqueId: `set-2-${item.id}`,
                         })),
                     ].map((tech) => {
-                        const iconurl = getIconUrl(tech.icon, theme);
-                        console.log(iconurl);
+                        // const iconurl = getIconUrl(tech.icon, theme);
+                        // console.log(iconurl);
                         return (
                             <li
                                 key={`key-${tech.uniqueId}`}
