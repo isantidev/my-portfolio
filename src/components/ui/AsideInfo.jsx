@@ -3,21 +3,8 @@ import {
     IoCopyOutline,
     IoMailOpenOutline,
     IoLogoLinkedin,
-    IoCallOutline,
     IoLogoGithub,
 } from "react-icons/io5";
-
-// async function handleCopy(isCopy, text) {
-//     console.log(isCopy, "handleCopy");
-//     if (isCopy) return;
-
-//     try {
-//         await navigator.clipboard.writeText(text);
-//         console.log("Copied!");
-//     } catch (err) {
-//         console.error("Failed to copy:", err);
-//     }
-// }
 
 const socialMedia = [
     {
@@ -59,7 +46,7 @@ const Contact = ({ social }) => {
                 console.error("Failed to copy:", err);
             }
         } else if (social.social_url) {
-            window.open(social.social_url, "_blank");
+            window.open(social.social_url, "_blank", "noopener");
         }
     };
 
@@ -69,16 +56,16 @@ const Contact = ({ social }) => {
         <li
             onClick={handleClick}
             data-url={social?.social_url}
-            className={`grid grid-cols-[auto_1fr] grid-rows-2 gap-2 p-4 rounded-md justify-items-center items-center ring-0 ring-custom-accent/40 transition-all duration-200 hover:ring-2 
+            className={`grid lg:grid-cols-[auto_1fr] lg:grid-rows-2 gap-x-12 gap-y-2 lg:py-4 lg:px-8 rounded-md justify-items-center items-center ring-0 ring-custom-accent/40 lg:bg-custom-secondary/40 backdrop-blur-2xl transition-all duration-200 hover:ring-2 
                 ${social?.social_url ? "cursor-pointer" : "cursor-copy"}`}
         >
-            <div className="size-full p-4 aspect-square rounded-full bg-custom-accent/20 overflow-hidden col-span-1 row-span-2">
-                <IconComponent className="size-full" />
+            <div className="p-2 lg:p-4 flex justify-center items-center aspect-square rounded-full bg-custom-accent/20 lg:col-span-1 lg:row-span-2">
+                <IconComponent className="size-full min-w-8 min-h-8 max-w-12 max-h-12" />
             </div>
-            <p className="text-lg lg:text-2xl text-custom-text pointer-events-none">
+            <p className="hidden sm:block text-lg text-custom-accent/60 lg:text-2xl font-semibold pointer-events-none">
                 {social.name}
             </p>
-            <small className="text-[16px] pointer-events-none">
+            <small className="hidden lg:block text-[16px] font-medium pointer-events-none">
                 {isCopied ? "Copied to clipboard!" : social.content}
             </small>
         </li>
@@ -87,14 +74,14 @@ const Contact = ({ social }) => {
 
 export const AsideInfo = () => {
     return (
-        <aside className="px-4">
+        <aside className="px-4 w-full lg:col-start-2">
             <ul
                 onClick={(e) => {
                     const item = e.target.closest("li");
                     const url = item?.dataset.url;
                     if (url) window.open(url, "_blank");
                 }}
-                className="grid grid-rows-3 grid-cols-1 gap-8 w-full justify-left"
+                className="grid grid-cols-3 lg:grid-rows-3 lg:grid-cols-1 gap-8 w-full justify-center lg:justify-left shrink-0"
             >
                 {socialMedia.map((media) => {
                     return <Contact key={media.social_url} social={media} />;
