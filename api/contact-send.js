@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     try {
         const data = await resend.emails.send({
-            from: `Contact from portfolio - <${getEnv("RESEND_EMAIL")}>`,
+            from: `Portfolio <${getEnv("RESEND_EMAIL")}>`,
             to: emailDefault,
             subject: `Nuevo mensaje de ${name}`,
             html: `
