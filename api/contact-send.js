@@ -1,8 +1,8 @@
 import { Resend } from "resend";
-import { getEnv } from "/api/env";
+import { getEnv } from "./env";
 
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
-const emailDefault = import.meta.env.DEFAULT_EMAIL;
+const resend = new Resend(getEnv("RESEND_API_KEY"));
+const emailDefault = getEnv("DEFAULT_EMAIL");
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     try {
         const data = await resend.emails.send({
-            from: `Mi Portfolio <${getEnv("RESEND_EMAIL")}>`,
+            from: `Contact from portfolio - <${getEnv("RESEND_EMAIL")}>`,
             to: emailDefault,
             subject: `Nuevo mensaje de ${name}`,
             html: `
