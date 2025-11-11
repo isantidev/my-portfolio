@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { getEnv } from "./env";
+import { getEnv } from "./env.js";
 
 const resend = new Resend(getEnv("RESEND_API_KEY"));
 const emailDefault = getEnv("DEFAULT_EMAIL");
