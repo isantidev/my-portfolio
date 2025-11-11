@@ -1,7 +1,8 @@
 import { Resend } from "resend";
+import { getEnv } from "/api/env";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const emailDefault = process.env.DEFAULT_EMAIL;
+const resend = new Resend(getEnv("RESEND_API_KEY"));
+const emailDefault = getEnv("DEFAULT_EMAIL");
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
@@ -16,7 +17,7 @@ export default async function handler(req, res) {
 
     try {
         const data = await resend.emails.send({
-            from: "Mi Portfolio <contact@portfolio.isanti.dev>",
+            from: `Mi Portfolio <${getEnv("RESEND_EMAIL")}>`,
             to: emailDefault,
             subject: `Nuevo mensaje de ${name}`,
             html: `
