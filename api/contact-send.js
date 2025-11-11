@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
-const emailDefault = import.meta.env.DEFAULT_EMAIL;
+const resend = new Resend(process.env.RESEND_API_KEY);
+const emailDefault = process.env.DEFAULT_EMAIL;
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
