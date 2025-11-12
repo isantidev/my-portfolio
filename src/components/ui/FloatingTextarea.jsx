@@ -34,8 +34,8 @@ export const FloatingTextarea = ({
                     transition-all duration-300 ease-out
                     ${
                         isActive
-                            ? "top-0 -translate-y-1/2 text-base text-custom-accent/80"
-                            : "top-6 text-xl text-custom-accent/50"
+                            ? "top-0 -translate-y-1/2 text-base text-custom-accent/90"
+                            : "top-6 text-xl text-custom-accent/60"
                     }
                 `}
             >

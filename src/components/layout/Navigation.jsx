@@ -23,8 +23,10 @@ const Navigation = () => {
                     <div className="flex items-center gap-3 md:gap-0 md:order-2">
                         <button
                             onClick={toggleTheme}
+                            aria-roledescription="Change the page theme"
                             className="size-8 rounded-sm cursor-pointer bg-custom-primary/40 hover:bg-custom-accent/20 hover:shadow-sm hover:shadow-custom-text/20"
                         >
+                            <p className="sr-only">Change Theme</p>
                             {theme === "light" ? (
                                 <IoMdSunny className="size-4 m-auto" />
                             ) : (
