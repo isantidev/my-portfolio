@@ -1,0 +1,31 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kevin Sierra",
+    "alternateName": "Isantidev",
+    "url": "https://www.isanti.dev",
+    "jobTitle": "Frontend Developer",
+    "description": "Frontend developer creating fast, accessible, and polished interfaces with React and TypeScript.",
+    "image": "https://www.isanti.dev/og-portfolio.webp",
+    "sameAs": [
+        "https://github.com/isantidev",
+        "https://www.linkedin.com/in/isantidev/"
+    ],
+    "email": "santis.sierra6@gmail.com",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Funza",
+        "addressRegion": "Cundinamarca",
+        "addressCountry": "CO"
+    },
+    "knowsLanguage": ["es", "en"],
+    "knowsAbout": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Vite",
+        "Frontend Development",
+        "Web Accessibility",
+        "UI Design"
+    ]
+}

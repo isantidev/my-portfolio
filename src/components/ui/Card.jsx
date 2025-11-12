@@ -42,7 +42,7 @@ export const CardJob = ({ title, enterprise, time, description }) => {
                         {descriptionHidden}
                     </span>
                     <button
-                        className="block font-light text-custom-primary/80 mt-1"
+                        className="block font-light text-custom-primary mt-1"
                         onClick={showMoreInfo}
                     >
                         {isExpanded === true ? "< Read less" : "Read more >"}
@@ -60,7 +60,7 @@ export const CardProject = (project) => {
     );
 
     return (
-        <article className="w-full py-6 px-8 rounded-sm shadow-custom-primary/20 shadow-[0px_0px_15px_0px] flex flex-col gap-2.5">
+        <li className="w-full py-6 px-8 rounded-sm shadow-custom-primary/20 shadow-[0px_0px_15px_0px] flex flex-col gap-2.5">
             <figure className="shrink max-h-72 mx-auto rounded-sm flex flex-col justify-between ">
                 <img
                     src={project.image.src}
@@ -107,6 +107,6 @@ export const CardProject = (project) => {
                     </a>
                 </div>
             </div>
-        </article>
+        </li>
     );
 };
