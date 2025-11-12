@@ -5,6 +5,7 @@ import Hero from "@layout/Hero.jsx";
 const Experience = lazy(() => import("@layout/Experience.jsx"));
 const Projects = lazy(() => import("@layout/Projects.jsx"));
 const Contact = lazy(() => import("@layout/Contact.jsx"));
+const About = lazy(() => import("@layout/About.jsx"));
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
             </Suspense>
             <Suspense fallback={null}>
                 <Projects />
+                <About />
             </Suspense>
             <Suspense fallback={null}>
                 <Contact />
