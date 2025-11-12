@@ -72,9 +72,9 @@ const Contact = ({ social }) => {
     );
 };
 
-export const AsideInfo = () => {
+const AsideInfo = () => {
     return (
-        <aside className="px-4 w-full lg:col-start-2">
+        <aside className="px-4 w-full row-start-2 lg:col-start-2">
             <ul
                 onClick={(e) => {
                     const item = e.target.closest("li");
@@ -90,3 +90,5 @@ export const AsideInfo = () => {
         </aside>
     );
 };
+
+export default AsideInfo;

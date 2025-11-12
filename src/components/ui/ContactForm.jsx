@@ -1,8 +1,8 @@
-import { FloatingInput } from "@ui/FloatingInput";
-import { FloatingTextarea } from "@ui/FloatingTextarea";
+import FloatingInput from "@ui/FloatingInput";
+import FloatingTextarea from "@ui/FloatingTextarea";
 import { useState } from "react";
 
-export const ContactForm = () => {
+const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -76,3 +76,5 @@ export const ContactForm = () => {
         </form>
     );
 };
+
+export default ContactForm;
