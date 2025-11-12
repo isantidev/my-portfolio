@@ -1,12 +1,6 @@
 import { useState } from "react";
 
-export const FloatingTextarea = ({
-    label,
-    name,
-    value,
-    onChange,
-    maxRows = 8,
-}) => {
+const FloatingTextarea = ({ label, name, value, onChange, maxRows = 8 }) => {
     const [isFocused, setIsFocused] = useState(false);
     const isActive = isFocused || value.length > 0;
     const maxHeight = `${maxRows * 1.5}rem`;
@@ -44,3 +38,5 @@ export const FloatingTextarea = ({
         </div>
     );
 };
+
+export default FloatingTextarea;

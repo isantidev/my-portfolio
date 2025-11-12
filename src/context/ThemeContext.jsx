@@ -4,6 +4,9 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
     const getInitialTheme = () => {
+        // Verificar que estamos en el navegador
+        if (typeof window === "undefined") return "light";
+
         // Primero verificar si hay un tema guardado
         const savedTheme = localStorage.getItem("theme");
         if (savedTheme) return savedTheme;
@@ -14,7 +17,8 @@ export const ThemeProvider = ({ children }) => {
             : "light";
     };
 
-    const [theme, setTheme] = useState(getInitialTheme);
+    // ✅ CAMBIO CLAVE: Usar función lazy en useState
+    const [theme, setTheme] = useState(() => getInitialTheme());
 
     useEffect(() => {
         // Aplicar el tema al DOM

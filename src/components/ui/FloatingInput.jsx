@@ -1,12 +1,6 @@
 import { useState } from "react";
 
-export const FloatingInput = ({
-    label,
-    name,
-    type = "text",
-    value,
-    onChange,
-}) => {
+const FloatingInput = ({ label, name, type = "text", value, onChange }) => {
     const [isFocused, setIsFocused] = useState(false);
     const isActive = isFocused || value.length > 0;
 
@@ -38,3 +32,5 @@ export const FloatingInput = ({
         </div>
     );
 };
+
+export default FloatingInput;

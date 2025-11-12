@@ -1,8 +1,9 @@
-import { FloatingInput } from "@ui/FloatingInput";
-import { FloatingTextarea } from "@ui/FloatingTextarea";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 
-export const ContactForm = () => {
+const FloatingInput = lazy(() => import("@ui/FloatingInput"));
+const FloatingTextarea = lazy(() => import("@ui/FloatingTextarea"));
+
+const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -41,27 +42,29 @@ export const ContactForm = () => {
             onSubmit={handleSubmit}
             className="flex flex-col gap-8 rounded-md p-4 bg-custom-secondary text-custom-accent/60"
         >
-            <FloatingInput
-                label="Name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-            />
+            <Suspense fallback={null}>
+                <FloatingInput
+                    label="Name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                />
 
-            <FloatingInput
-                label="Email"
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-            />
+                <FloatingInput
+                    label="Email"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                />
 
-            <FloatingTextarea
-                label="I'll be happy to get your message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-            />
+                <FloatingTextarea
+                    label="I'll be happy to get your message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                />
+            </Suspense>
 
             <button
                 type="submit"
@@ -76,3 +79,5 @@ export const ContactForm = () => {
         </form>
     );
 };
+
+export default ContactForm;
