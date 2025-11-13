@@ -4,7 +4,7 @@ import App from "./App";
 import Navigation from "@layout/Navigation.jsx";
 import { ThemeProvider } from "./context/ThemeContext";
 import { lazy, Suspense } from "react";
-import "@styles/global.css";
+import "@styles/globals.css";
 import "@fontsource-variable/onest";
 
 const Footer = lazy(() => import("@layout/Footer.jsx"));
