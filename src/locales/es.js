@@ -36,4 +36,29 @@ export default {
             },
         },
     },
+    proyects: {},
+    about: {
+        title: "Acerca de mí",
+        content: {
+            firstParagraph: {
+                first: "Soy Santiago Sierra, soy un",
+                firstHightlight: "desarollador de software con 19 años de edad",
+                second: "de Funza, Colombia. Hace poco",
+                secondHighlight:
+                    "completé un tecnólogo en Análisis y Desarrollo de Software",
+                third: "y estoy emocionado por aplicar mis conocimientos en proyectos del mundo real.",
+            },
+            secondParagraph: {
+                first: "Hace 4 años, fui",
+                firstHightlight:
+                    "seleccionado para hacer parte de un programa de immersión bilingüe gracias a mi nivel de ingles",
+                second: "Tal experiencia me dió un nuevo punto de vista por los idiomas y abrió mi mente para buscar oportunidades internacionales.",
+            },
+            thirdParagraph: {
+                first: "Además de codear, soy un apacionado por los idiomas y el ciclismo. Creo que",
+                firstHightlight: "nunca hay que parar de aprender",
+                second: "y siempre estoy en busqueda de nuevos retos que me impulsen personal y profesionalmente.",
+            },
+        },
+    },
 };
