@@ -1,4 +1,5 @@
 import { IoBook } from "react-icons/io5";
+import bigImg from "@images/isantidev-vert.webp";
 
 const About = () => {
     return (
@@ -16,22 +17,25 @@ const About = () => {
                 <div className="relative w-full h-[400px] md:h-[450px]">
                     <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-3/5 h-full *:ring-8 *:ring-custom-text/80">
                         <img
-                            src="/src/assets/images/isantidev-vert.webp"
+                            src={bigImg}
                             alt=""
                             className="w-full h-full object-cover rounded-xl shadow-lg"
+                            loading="lazy"
                         />
                     </div>
 
                     <div className="absolute -bottom-12 left-0 grid grid-cols-2 gap-20 px-[10%] *:ring-8 *:ring-custom-text z-20">
                         <img
-                            src="/src/assets/images/isantidev-vert.webp"
+                            src={bigImg}
                             alt=""
                             className="aspect-square h-full w-full object-cover rounded-lg -rotate-12"
+                            loading="lazy"
                         />
                         <img
-                            src="/src/assets/images/isantidev-vert.webp"
+                            src={bigImg}
                             alt=""
                             className="aspect-square h-full w-full object-cover rounded-lg shadow-xl rotate-12"
+                            loading="lazy"
                         />
                     </div>
                 </div>
