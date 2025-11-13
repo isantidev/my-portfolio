@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLanguage } from "@context/LanguageContext";
 import {
     IoCopyOutline,
     IoMailOpenOutline,
@@ -32,6 +33,7 @@ const socialMedia = [
 
 const Contact = ({ social }) => {
     const [isCopied, setIsCopied] = useState(false);
+    const { t } = useLanguage();
 
     const handleClick = async () => {
         if (social.copy) {
@@ -66,7 +68,7 @@ const Contact = ({ social }) => {
                 {social.name}
             </p>
             <small className="hidden lg:block text-[16px] font-medium pointer-events-none">
-                {isCopied ? "Copied to clipboard!" : social.content}
+                {isCopied ? t("contact.content.info.copy") : social.content}
             </small>
         </li>
     );

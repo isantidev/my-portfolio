@@ -1,3 +1,4 @@
+import { useLanguage } from "@context/LanguageContext";
 import {
     IoMailOpenOutline,
     IoLogoLinkedin,
@@ -5,6 +6,8 @@ import {
 } from "react-icons/io5";
 
 const Footer = () => {
+    const { t } = useLanguage();
+
     return (
         <footer className="relative w-full min-h-64 mt-8 md:mt-16 flex flex-col items-center">
             <main className="mx-auto w-full flex flex-col max-w-[1440px] text-custom-text px-4 z-10">
@@ -14,7 +17,7 @@ const Footer = () => {
                             Kevin Santiago Sierra Rodriguez
                         </h3>
                         <p className="text-sm opacity-80 mb-4">
-                            Software developer.
+                            {t("footer.content.career")}
                         </p>
                         <p className="text-sm opacity-70">
                             📍 Bogotá, Cundinamarca, CO
@@ -23,7 +26,7 @@ const Footer = () => {
 
                     <div className="flex flex-col items-center text-center">
                         <h4 className="font-semibold text-lg text-custom-text/90 mb-4">
-                            Get in touch
+                            {t("footer.content.callToAction")}
                         </h4>
                         <div className="space-y-3 text-sm">
                             <a

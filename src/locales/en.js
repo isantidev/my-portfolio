@@ -24,4 +24,61 @@ export default {
         },
         callToAction: "Available to work!",
     },
+    experience: {
+        title: "Experience",
+        content: {
+            tp: {
+                title: "Desktop & Remote Support IT",
+                enterprise: "TP S.A.S.",
+                time: "Feb 2025 - Aug 2025",
+                description:
+                    "Developed and optimized a custom Linux bootable system, achieving a 40% reduction in ISO size (2.7 GB to 1.6 GB) and 37% faster boot times through terminal-based configuration. Performed system hardening, delivered technical support, level 1 and 2. Troubleshooting while contributing to IT projects and system improvements; creating comprehensive technical documentation.",
+            },
+        },
+    },
+    proyects: {},
+    about: {
+        title: "About me",
+        content: {
+            firstParagraph: {
+                first: "I'm Santiago Sierra! I'm a",
+                firstHightlight: "19-year-old software developer",
+                second: "from Funza, Colombia. I recently",
+                secondHighlight:
+                    "completed my Associate Degree in Software Analysis and Development",
+                third: "and I'm eager to apply my knowledge in real-world projects.",
+            },
+            secondParagraph: {
+                first: "Four years ago, I was",
+                firstHightlight:
+                    "selected for a bilingual immersion program in recognition of english level",
+                second: "That experience sparked my passion for languages and opened my mind to international opportunities.",
+            },
+            thirdParagraph: {
+                first: "Beyond coding, I'm passionate about languages and cycling. I believe that",
+                firstHightlight: "learning never stops",
+                second: "and I'm always looking for new challenges that push me to grow both professionally and personally.",
+            },
+        },
+    },
+    contact: {
+        title: "Contact",
+        content: {
+            form: {
+                inputText: "Name",
+                inputEmail: "Email",
+                inputTextarea: "How may I help you?",
+            },
+            info: {
+                copy: "Copied to clipboard!",
+            },
+        },
+        callToAction: "Let's get in contact",
+    },
+    footer: {
+        content: {
+            career: "Software Developer.",
+            callToAction: "Get in touch",
+        },
+    },
 };

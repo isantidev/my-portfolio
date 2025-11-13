@@ -1,10 +1,13 @@
 import { IoCall } from "react-icons/io5";
 import { lazy, Suspense } from "react";
+import { useLanguage } from "@context/LanguageContext";
 
 const ContactForm = lazy(() => import("@ui/ContactForm.jsx"));
 const AsideInfo = lazy(() => import("@ui/AsideInfo.jsx"));
 
 const Contact = () => {
+    const { t } = useLanguage();
+
     return (
         <section
             id="Contact"
@@ -14,7 +17,7 @@ const Contact = () => {
                 <span className="w-8 h-full p-1 *:w-full flex justify-center">
                     <IoCall className="my-auto size-full" />
                 </span>
-                <h2>Contact</h2>
+                <h2>{t("contact.title")}</h2>
             </header>
             <Suspense fallback={null}>
                 <ContactForm />

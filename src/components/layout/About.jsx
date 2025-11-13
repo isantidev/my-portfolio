@@ -1,7 +1,10 @@
 import { IoBook } from "react-icons/io5";
 import bigImg from "@images/isantidev-vert.webp";
+import { useLanguage } from "@context/LanguageContext";
 
 const About = () => {
+    const { t } = useLanguage();
+
     return (
         <section
             id="About"
@@ -11,7 +14,7 @@ const About = () => {
                 <span className="w-8 h-full p-1 *:w-full flex justify-center">
                     <IoBook className="my-auto size-full" />
                 </span>
-                <h2>About me</h2>
+                <h2>{t("about.title")}</h2>
             </header>
             <article className="max-w-2xl w-full mx-auto py-14 relative">
                 <div className="relative w-full h-[400px] md:h-[450px]">
@@ -42,30 +45,29 @@ const About = () => {
             </article>
             <article className="flex flex-col gap-8 text-lg *:text-balance [&_strong]:text-custom-accent/80">
                 <p>
-                    I'm Santiago! I'm a{" "}
-                    <strong>19-year-old software developer</strong> from Funza,
-                    Colombia. I recently{" "}
+                    {t("about.content.firstParagraph.first") + " "}
                     <strong>
-                        completed my Associate Degree in Software Analysis and
-                        Development
+                        {t("about.content.firstParagraph.firstHightlight")}
+                    </strong>{" "}
+                    {t("about.content.firstParagraph.second") + " "}
+                    <strong>
+                        {t("about.content.firstParagraph.secondHighlight")}
                     </strong>
-                    , and I'm eager to apply my knowledge in real-world
-                    projects.
+                    {", " + t("about.content.firstParagraph.third")}
                 </p>
                 <p>
-                    Four years ago, I was{" "}
+                    {t("about.content.secondParagraph.first") + " "}
                     <strong>
-                        selected for a bilingual immersion program in
-                        recognition of my academic excellence
+                        {t("about.content.secondParagraph.firstHightlight")}
                     </strong>
-                    . That experience sparked my passion for languages and
-                    opened my mind to international opportunities.
+                    {". " + t("about.content.secondParagraph.second")}
                 </p>
                 <p>
-                    Beyond coding, I'm passionate about languages and cycling. I
-                    believe that <strong>learning never stops</strong>, and I'm
-                    always looking for new challenges that push me to grow both
-                    professionally and personally.
+                    {t("about.content.thirdParagraph.first") + " "}
+                    <strong>
+                        {t("about.content.thirdParagraph.firstHightlight")}
+                    </strong>
+                    {", " + t("about.content.thirdParagraph.second")}
                 </p>
             </article>
         </section>

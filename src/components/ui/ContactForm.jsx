@@ -1,9 +1,12 @@
 import { useState, lazy, Suspense } from "react";
+import { useLanguage } from "@context/LanguageContext";
 
 const FloatingInput = lazy(() => import("@ui/FloatingInput"));
 const FloatingTextarea = lazy(() => import("@ui/FloatingTextarea"));
 
 const ContactForm = () => {
+    const { t } = useLanguage();
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -44,14 +47,14 @@ const ContactForm = () => {
         >
             <Suspense fallback={null}>
                 <FloatingInput
-                    label="Name"
+                    label={t("contact.content.form.inputText")}
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                 />
 
                 <FloatingInput
-                    label="Email"
+                    label={t("contact.content.form.inputEmail")}
                     type="email"
                     name="email"
                     value={formData.email}
@@ -59,7 +62,7 @@ const ContactForm = () => {
                 />
 
                 <FloatingTextarea
-                    label="How can I help you?"
+                    label={t("contact.content.form.inputTextarea")}
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
@@ -70,7 +73,7 @@ const ContactForm = () => {
                 type="submit"
                 className="mx-auto px-4 py-2 mt-4 text-lg text-custom-bg font-medium md:px-6 md:py-3 rounded-lg bg-custom-accent  hover:scale-110 hover:-translate-y-2 focus:bg-custom-accent/80 focus:scale-90"
             >
-                Let's get in contact
+                {t("contact.callToAction")}
             </button>
 
             {status === "sending" && <p>Enviando...</p>}
