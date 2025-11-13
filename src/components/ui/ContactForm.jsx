@@ -59,7 +59,7 @@ const ContactForm = () => {
                 />
 
                 <FloatingTextarea
-                    label="I'll be happy to get your message"
+                    label="How can I help you?"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}

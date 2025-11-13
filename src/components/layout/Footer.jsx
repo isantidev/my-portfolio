@@ -10,7 +10,7 @@ const Footer = () => {
             <main className="mx-auto w-full flex flex-col max-w-[1440px] text-custom-text px-4 z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4 md:mb-8">
                     <div className="text-center">
-                        <h3 className="font-bold text-xl mb-4">
+                        <h3 className="font-bold text-xl text-custom-text/90 mb-4">
                             Kevin Santiago Sierra Rodriguez
                         </h3>
                         <p className="text-sm opacity-80 mb-4">
@@ -22,7 +22,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-center text-center">
-                        <h4 className="font-semibold text-lg mb-4">
+                        <h4 className="font-semibold text-lg text-custom-text/90 mb-4">
                             Get in touch
                         </h4>
                         <div className="space-y-3 text-sm">
