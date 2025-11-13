@@ -5,7 +5,7 @@ const About = () => {
     return (
         <section
             id="About"
-            className="grid grid-flow-col md:grid-cols-2 grid-rows-[auto_repeat(2,1fr)] md:grid-rows-[auto_1fr] items-center gap-4 lg:gap-8"
+            className="scroll-m-20 grid grid-flow-col md:grid-cols-2 grid-rows-[auto_repeat(2,1fr)] md:grid-rows-[auto_1fr] items-center gap-4 lg:gap-8"
         >
             <header className="inline-flex gap-2 items-center col-start-1 col-end-3">
                 <span className="w-8 h-full p-1 *:w-full flex justify-center">

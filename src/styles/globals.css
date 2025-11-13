@@ -27,6 +27,7 @@ body,
         background-color: var(--color-bg);
         color: var(--color-text);
         color-scheme: light;
+        scroll-behavior: smooth;
     }
 
     html.dark {
