@@ -1,4 +1,4 @@
-import profileImg from "@images/isantidev-vert.webp";
+import profileImg from "@images/mine-AI-removebg.webp";
 import Stack from "@layout/Stack.jsx";
 import "@styles/keyframes.css";
 
@@ -6,11 +6,10 @@ const Hero = () => {
     return (
         <>
             <section
-                aria-label="about-me"
-                className="flex flex-col gap-4 lg:gap-8 pt-20 md:h-auto md:pt-36 md:pb-20 scroll-m-20 w-full px-4"
+                className="flex flex-col gap-4 lg:gap-8 pt-20 md:h-auto md:pt-24 lg:pt-36 md:pb-20 scroll-m-20 w-full px-4"
                 id="Hero"
             >
-                <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+                <div className="grid grid-cols-1 lg:grid-flow-col items-center justify-between gap-12">
                     <article
                         className="flex flex-col w-full justify-between items-center
                         md:items-start order-2 md:order-1"
@@ -19,7 +18,7 @@ const Hero = () => {
                             Hey, I'm Kevin Sierra
                         </h1>
                         <br />
-                        <p className="text-balance text-xl md:text-left max-w-lg">
+                        <p className="text-balance w-full text-xl md:text-left max-w-lg">
                             <strong className="text-custom-accent/80">
                                 {"Software Developer "}
                             </strong>
@@ -45,27 +44,35 @@ const Hero = () => {
                         </p>
                     </article>
 
-                    <div className="flex flex-col h-fit gap-8 items-center md:mx-16 order-1">
+                    <div className="relative row-start-1 lg:row-auto flex flex-col w-full mx-auto h-full gap-8 items-center order-1">
                         <span
                             area-label="profile picture"
-                            className="size-40 overflow-hidden rounded-full shadow-custom-accent/40 shadow-[0px_0px_15px_0px] "
+                            className="max-h-96 h-full aspect-auto mask-alpha mask-b-from-custom-bg mask-b-from-30 mask-r-from-white mask-r-from-60 mask-r-to-transparent  overflow-hidden rounded-lg  shadow-custom-accent/40 shadow-[0px_0px_15px_0px] "
                         >
                             <img
-                                className="h-full w-full object-cover"
+                                className="h-full object-cover"
                                 src={profileImg}
                                 alt="Kevin Santiago Sierra Rodriguez's picture"
                             />
                         </span>
-                        <a
-                            href="#"
-                            className="relative py-1 px-3 text-center text-balance bg-custom-primary/10 rounded-sm max-w-fit w-fit hover:animate-pulse opacity-90 transition-all"
-                        >
-                            <span className="absolute -top-1 -right-1 size-3 bg-custom-primary animate-ping rounded-full opacity-80"></span>
-                            <span className="absolute -top-1 -right-1 size-3 rounded-full bg-custom-primary"></span>
-                            <span className="text-custom-accent text-lg">
-                                Available to work!
-                            </span>
-                        </a>
+                        <div className="absolute bottom-0 -rotate-6">
+                            <a
+                                href="https://www.linkedin.com/in/isantidev/"
+                                className="relative px-8 py-2 sm:px-16 text-center text-balance bg-custom-secondary max-w-fit w-fit hover:animate-pulse opacity-90 transition-all block"
+                                style={{
+                                    clipPath:
+                                        "polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%)",
+                                }}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span className="absolute -top-[3px] right-[1px] size-4 bg-custom-primary animate-ping rounded-full opacity-80"></span>
+                                <span className="absolute -top-[2px] right-[2px] size-3 rounded-full bg-custom-primary"></span>
+                                <span className="text-custom-accent text-lg">
+                                    Available to work!
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <Stack />
