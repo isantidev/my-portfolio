@@ -36,7 +36,29 @@ body,
     body {
         background-color: var(--color-bg);
         color: var(--color-text);
-        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body,
+    section,
+    nav,
+    div,
+    span,
+    header,
+    footer,
+    article,
+    aside,
+    main {
+        transition: background-color 0.3s ease-in, color 0.3s ease-in,
+            border-color 0.3s ease-out;
+    }
+
+    button,
+    a,
+    input,
+    textarea,
+    select {
+        transition: background-color 0.15s ease, color 0.15s ease,
+            transform 0.15s ease;
     }
 }
 
