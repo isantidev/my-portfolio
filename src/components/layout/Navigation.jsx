@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useTheme } from "/src/components/hooks/useTheme";
 import { IoMdSunny, IoMdMoon } from "react-icons/io";
-import { IoMenu, IoClose } from "react-icons/io5";
+import { IoMenu, IoClose, IoLanguage } from "react-icons/io5";
+import { useLanguage } from "@context/LanguageContext";
 
 const Navigation = () => {
     const { theme, toggleTheme } = useTheme();
+    const { language, toggleLanguage } = useLanguage();
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleNavbar = () => {
@@ -17,14 +19,27 @@ const Navigation = () => {
                 <div className="w-full md:mx-4 md:rounded-sm max-w-screen-xl flex flex-wrap items-center justify-between p-4 h-auto backdrop-blur-3xl">
                     <a href="#Hero" className="block">
                         <span className="h-full align-middle text-xl font-bold">
-                            isantidev
+                            Isantidev
                         </span>
                     </a>
-                    <div className="flex items-center gap-3 md:gap-0 md:order-2">
+                    <div className="flex items-center gap-3 md:gap-4 md:order-2">
+                        <button
+                            onClick={toggleLanguage}
+                            aria-roledescription="Change the page language"
+                            className="h-8 inline-flex justify-center items-center px-4 gap-2 lg:gap-4 rounded-sm cursor-pointer bg-custom-secondary/20 ring-2 ring-custom-text/10 hover:bg-custom-accent/10 hover:scale-105 [&_span]:uppercase [&_span]:font-semibold text-sm [&_p_span]:pointer-events-none [&_svg]:hidden [&_svg]:md:block transition-colors ease-in"
+                        >
+                            <p className="sr-only">Change language</p>
+                            <IoLanguage className="size-4 m-auto pointer-events-none" />
+                            {language === "en" ? (
+                                <span>EN</span>
+                            ) : (
+                                <span>ES</span>
+                            )}
+                        </button>
                         <button
                             onClick={toggleTheme}
                             aria-roledescription="Change the page theme"
-                            className="size-8 rounded-sm cursor-pointer bg-custom-primary/40 hover:bg-custom-accent/20 hover:shadow-sm hover:shadow-custom-text/20"
+                            className="size-8 rounded-sm cursor-pointer bg-custom-secondary/20 ring-2 ring-custom-text/10 hover:bg-custom-accent/10 hover:scale-105 transition-all ease-in"
                         >
                             <p className="sr-only">Change Theme</p>
                             {theme === "light" ? (
@@ -43,9 +58,9 @@ const Navigation = () => {
                         >
                             <span className="sr-only">Open main menu</span>
                             {isExpanded === true ? (
-                                <IoClose className="size-7 stroke-3" />
+                                <IoClose className="size-7 stroke-3 pointer-events-none" />
                             ) : (
-                                <IoMenu className="size-7 stroke-3" />
+                                <IoMenu className="size-7 stroke-3 pointer-events-none" />
                             )}
                         </button>
                     </div>
