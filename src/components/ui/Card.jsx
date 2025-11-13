@@ -22,7 +22,7 @@ export const CardJob = ({ title, enterprise, time, description }) => {
         <>
             <article
                 tabIndex={0}
-                className="grid gap-4 p-2 rounded-sm hover:bg-custom-secondary focus:bg-custom-secondary transition ease-in-out
+                className="grid gap-4 p-2 rounded-sm hover:bg-custom-secondary focus:bg-custom-secondary transition ease-in
                     md:p-4 lg:py-8 lg:px-14 md:grid-cols-2"
             >
                 <div className="relative flex flex-col gap-1">
@@ -35,19 +35,27 @@ export const CardJob = ({ title, enterprise, time, description }) => {
                         {time}
                     </span>
                 </div>
-                <p className="text-lg">
-                    {descriptionShown}
-                    <span className="sr-only">Show more info</span>
-                    <span className={isExpanded === true ? "block" : "hidden"}>
-                        {descriptionHidden}
-                    </span>
+                <div className="text-lg">
+                    <p>{descriptionShown}</p>
+
+                    <div
+                        className={`grid transition-all duration-500 ease-in-out ${
+                            isExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                        }`}
+                    >
+                        <span className="sr-only">Show more info</span>
+                        <div className="overflow-hidden mt-2">
+                            <p>{descriptionHidden}</p>
+                        </div>
+                    </div>
+
                     <button
-                        className="block font-light text-custom-primary mt-1"
+                        className="block text-sm md:text-base font-medium text-custom-accent/80 mt-2"
                         onClick={showMoreInfo}
                     >
-                        {isExpanded === true ? "< Read less" : "Read more >"}
+                        {isExpanded ? "< Read less" : "Read more >"}
                     </button>
-                </p>
+                </div>
             </article>
         </>
     );
