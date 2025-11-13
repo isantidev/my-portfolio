@@ -12,7 +12,7 @@ const Hero = () => {
                 <div className="grid grid-cols-1 lg:grid-flow-col items-center justify-between gap-12">
                     <article
                         className="flex flex-col w-full justify-between items-center
-                        md:items-start order-2 md:order-1"
+                        lg:items-start order-2 md:order-1"
                     >
                         <h1 className="text-pretty md:text-left">
                             Hey, I'm Kevin Sierra
@@ -58,7 +58,7 @@ const Hero = () => {
                         <div className="absolute bottom-0 -rotate-6">
                             <a
                                 href="https://www.linkedin.com/in/isantidev/"
-                                className="relative px-8 py-2 sm:px-16 text-center text-balance bg-custom-secondary max-w-fit w-fit hover:animate-pulse opacity-90 transition-all block"
+                                className="relative px-10 py-2 sm:px-20 text-center text-balance bg-custom-secondary max-w-fit w-fit hover:animate-pulse opacity-90 transition-all block"
                                 style={{
                                     clipPath:
                                         "polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%)",
@@ -67,8 +67,8 @@ const Hero = () => {
                                 rel="noopener noreferrer"
                             >
                                 <span className="absolute -top-[3px] right-[1px] size-4 bg-custom-primary animate-ping rounded-full opacity-80"></span>
-                                <span className="absolute -top-[2px] right-[2px] size-3 rounded-full bg-custom-primary"></span>
-                                <span className="text-custom-accent text-lg">
+                                <span className="absolute -top-[2px] right-[1px] size-3 rounded-full bg-custom-primary"></span>
+                                <span className="text-custom-accent text-base md:text-lg">
                                     Available to work!
                                 </span>
                             </a>

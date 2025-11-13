@@ -13,6 +13,8 @@ export default defineConfig({
             "@layout": "/src/components/layout",
             "@ui": "/src/components/ui",
             "@context": "/src/context",
+            "@components": "/src/components",
+            "@locales": "/src/locales",
         },
     },
 });
