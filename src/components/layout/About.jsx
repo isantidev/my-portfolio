@@ -55,18 +55,12 @@ const About = () => {
                 <p>
                     Four years ago, I was{" "}
                     <strong>
-                        selected by my local government for a bilingual
-                        immersion program in recognition of my academic
-                        excellence
+                        selected for a bilingual immersion program in
+                        recognition of my academic excellence
                     </strong>
                     . That experience sparked my passion for languages and
-                    opened my mind to international opportunities—now I{" "}
-                    <strong>
-                        work confidently in both Spanish and English
-                    </strong>
-                    .
+                    opened my mind to international opportunities.
                 </p>
-
                 <p>
                     Beyond coding, I'm passionate about languages and cycling. I
                     believe that <strong>learning never stops</strong>, and I'm
