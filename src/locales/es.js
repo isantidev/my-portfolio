@@ -75,4 +75,10 @@ export default {
         },
         callToAction: "Entremos en contacto",
     },
+    footer: {
+        content: {
+            career: "Desarrollador de Software.",
+            callToAction: "Entremos en contacto",
+        },
+    },
 };

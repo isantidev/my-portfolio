@@ -75,4 +75,10 @@ export default {
         },
         callToAction: "Let's get in contact",
     },
+    footer: {
+        content: {
+            career: "Software Developer.",
+            callToAction: "Get in touch",
+        },
+    },
 };
