@@ -28,8 +28,8 @@ const Stack = () => {
     return (
         <section aria-label="stack" className="w-full" id="Stack">
             <div className="relative w-full overflow-hidden">
-                <span className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-custom-bg md:via-custom-bg/80 z-10" />
-                <span className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-custom-bg md:via-custom-bg/80 z-10" />
+                <span className="absolute -left-1 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-custom-bg md:via-custom-bg/80 z-10" />
+                <span className="absolute -right-1 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-custom-bg md:via-custom-bg/80 z-10" />
                 <ul
                     className="flex items-center animate-scroll"
                     style={{ width: `${techStack.length * 256 * 2}px` }}

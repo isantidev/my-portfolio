@@ -40,7 +40,7 @@ const ContactForm = () => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-8 rounded-md p-4 bg-custom-secondary text-custom-accent/60"
+            className="flex flex-col gap-8 rounded-md px-4 py-8 ring-2 ring-custom-secondary"
         >
             <Suspense fallback={null}>
                 <FloatingInput
@@ -59,7 +59,7 @@ const ContactForm = () => {
                 />
 
                 <FloatingTextarea
-                    label="I'll be happy to get your message"
+                    label="How can I help you?"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
@@ -68,7 +68,7 @@ const ContactForm = () => {
 
             <button
                 type="submit"
-                className="mx-auto px-4 py-2 text-lg md:px-6 md:py-3 rounded-lg bg-custom-primary/60 text-custom-text opacity-90 hover:scale-125 focus:opacity-100 focus:scale-90"
+                className="mx-auto px-4 py-2 mt-4 text-lg text-custom-bg font-medium md:px-6 md:py-3 rounded-lg bg-custom-accent  hover:scale-110 hover:-translate-y-2 focus:bg-custom-accent/80 focus:scale-90"
             >
                 Let's get in contact
             </button>
