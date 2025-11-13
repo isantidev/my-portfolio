@@ -1,8 +1,11 @@
 import profileImg from "@images/mine-AI-removebg.webp";
 import Stack from "@layout/Stack.jsx";
 import "@styles/keyframes.css";
+import { useLanguage } from "@context/LanguageContext";
 
 const Hero = () => {
+    const { t } = useLanguage();
+
     return (
         <>
             <section
@@ -15,30 +18,31 @@ const Hero = () => {
                         lg:items-start order-2 md:order-1"
                     >
                         <h1 className="text-pretty md:text-left">
-                            Hey, I'm Kevin Sierra
+                            {t("hero.title")}
                         </h1>
                         <br />
                         <p className="text-balance w-full text-xl md:text-left max-w-lg">
                             <strong className="text-custom-accent/80">
-                                {"Software Developer "}
+                                {t("hero.content.career") + " "}
                             </strong>
-                            focused on building reliable, high-quality
-                            applications with
+                            {t("hero.content.text.first") + " "}
                             <strong className="text-[#60dafb]">
-                                {" React"}
+                                {t("hero.content.stack.react")}
                             </strong>
-                            ,<strong className="text-[#f0db4f]">{" Js"}</strong>
-                            {" and"}
-                            <strong className="text-[#3178c6]">{" Ts"}</strong>
-                            . Skilled in Agile collaboration and effective in
-                            international teams.
+                            ,
+                            <strong className="text-[#f0db4f]">
+                                {" " + t("hero.content.stack.javascript")}
+                            </strong>
+                            {" " + t("hero.content.and")}
+                            <strong className="text-[#3178c6]">
+                                {" " + t("hero.content.stack.typescript")}.
+                            </strong>
+                            {" " + t("hero.content.text.second")}
                             <br />
                             <br />
                             <small>
                                 <i className="text-custom-text/60 ">
-                                    Currently strengthening my stack with
-                                    TypeScript, testing, and Azure to deliver
-                                    modern, enterprise-grade solutions.
+                                    {t("hero.content.learning")}
                                 </i>
                             </small>
                         </p>
@@ -69,7 +73,7 @@ const Hero = () => {
                                 <span className="absolute -top-[3px] right-[1px] size-4 bg-custom-primary animate-ping rounded-full opacity-80"></span>
                                 <span className="absolute -top-[2px] right-[1px] size-3 rounded-full bg-custom-primary"></span>
                                 <span className="text-custom-accent text-base md:text-lg">
-                                    Available to work!
+                                    {t("hero.callToAction")}
                                 </span>
                             </a>
                         </div>
