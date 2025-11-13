@@ -61,4 +61,18 @@ export default {
             },
         },
     },
+    contact: {
+        title: "Contacto",
+        content: {
+            form: {
+                inputText: "Nombre",
+                inputEmail: "Correo",
+                inputTextarea: "¿Cómo puedo ser de ayuda?",
+            },
+            info: {
+                copy: "Copiado en el portapapeles",
+            },
+        },
+        callToAction: "Entremos en contacto",
+    },
 };

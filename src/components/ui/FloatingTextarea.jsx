@@ -23,7 +23,7 @@ const FloatingTextarea = ({ label, name, value, onChange, maxRows = 8 }) => {
             <label
                 htmlFor={`textarea-${name}`}
                 className={`
-                    absolute left-4 px-2
+                    absolute left-2 px-2
                     font-medium 
                     pointer-events-none
                     transition-all duration-300 ease-out

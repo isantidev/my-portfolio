@@ -61,4 +61,18 @@ export default {
             },
         },
     },
+    contact: {
+        title: "Contact",
+        content: {
+            form: {
+                inputText: "Name",
+                inputEmail: "Email",
+                inputTextarea: "How may I help you?",
+            },
+            info: {
+                copy: "Copied to clipboard!",
+            },
+        },
+        callToAction: "Let's get in contact",
+    },
 };
