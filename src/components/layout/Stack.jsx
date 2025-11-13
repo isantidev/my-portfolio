@@ -1,4 +1,4 @@
-import { useTheme } from "@context/ThemeContext";
+import { useTheme } from "/src/components/hooks/useTheme";
 import "@styles/keyframes.css";
 
 function getIconUrl(name, theme) {
