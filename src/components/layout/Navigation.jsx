@@ -5,10 +5,12 @@ import { IoMenu, IoClose, IoLanguage } from "react-icons/io5";
 import { useLanguage } from "@context/LanguageContext";
 
 const Navigation = () => {
+    // toogle Theme and Language
     const { theme, toggleTheme } = useTheme();
     const { language, toggleLanguage } = useLanguage();
-    const [isExpanded, setIsExpanded] = useState(false);
+    const { t } = useLanguage();
 
+    const [isExpanded, setIsExpanded] = useState(false);
     const toggleNavbar = () => {
         setIsExpanded(!isExpanded);
     };
@@ -76,7 +78,7 @@ const Navigation = () => {
                                     href="#Experience"
                                     className="block py-2 px-3 md:py-1 text-custom-text/90 md:rounded-sm md:overflow-auto hover:text-custom-text focus:bg-custom-accent/20 md:border-0 md:hover:bg-custom-accent/20 "
                                 >
-                                    Experience
+                                    {t("nav.experience")}
                                 </a>
                             </li>
                             <li>
@@ -84,7 +86,7 @@ const Navigation = () => {
                                     href="#Projects"
                                     className="block py-2 px-3 md:py-1 text-custom-text/90 md:rounded-sm hover:text-custom-text focus:bg-custom-accent/20 md:border-0 md:hover:bg-custom-accent/20 "
                                 >
-                                    Projects
+                                    {t("nav.projects")}
                                 </a>
                             </li>
                             <li>
@@ -92,7 +94,7 @@ const Navigation = () => {
                                     href="#About"
                                     className="block py-2 px-3 md:py-1 text-custom-text/90 md:rounded-sm hover:text-custom-text focus:bg-custom-accent/20 md:border-0 md:hover:bg-custom-accent/20 "
                                 >
-                                    About me
+                                    {t("nav.about")}
                                 </a>
                             </li>
                             <li>
@@ -100,7 +102,7 @@ const Navigation = () => {
                                     href="#Contact"
                                     className="block py-2 px-3 md:py-1 text-custom-text/90 md:rounded-sm hover:text-custom-text focus:bg-custom-accent/20 md:border-0 md:hover:bg-custom-accent/20 "
                                 >
-                                    Contact
+                                    {t("nav.contact")}
                                 </a>
                             </li>
                         </ul>
