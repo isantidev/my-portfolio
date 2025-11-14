@@ -48,7 +48,7 @@ export default {
         content: {
             portfolio: {
                 description:
-                    "Portafolio personal creado con React, Vite y Tailwind CSS, con un diseño moderno, rápido y responsivo. Incluye React Icons y un formulario funcional integrado con Resend para facilitar el contacto.",
+                    "Mi portafolio personal creado con React, Vite y Tailwind CSS, con un diseño moderno, rápido y responsivo. Incluye React Icons y un formulario funcional integrado con Resend para facilitar el contacto.",
                 image: {
                     caption: "Vista previa del portafolio isantidev",
                 },

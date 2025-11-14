@@ -7,6 +7,14 @@ export default {
     image: {
         src: portfolioImage,
     },
-    stack: ["React", "Vite", "Tailwind", "Resend"],
+    stack: [
+        "vite",
+        "react",
+        "javascript",
+        "tailwind css",
+        "vercel",
+        "react-icons",
+        "resend",
+    ],
     status: "deploy",
 };
