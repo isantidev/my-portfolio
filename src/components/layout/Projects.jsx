@@ -1,20 +1,12 @@
 import { CardProject } from "@ui/Card.jsx";
 import { IoBook } from "react-icons/io5";
-import stocksoftPreview from "@images/project-stocksoft.webp";
-
-const stocksoft = {
-    title: "Stocksoft",
-    image: {
-        src: stocksoftPreview,
-        caption: "Stocksoft - Inventory Management System Preview",
-    },
-    stack: ["php", "javascript", "css", "mysql", "apache"],
-    description:
-        "Stocksoft is a web-based inventory management system built with a PHP backend, styled with CSS, and enhanced by JavaScript components. It helps businesses keep track of products, manage stock data, and streamline product organization with a structured, user-friendly interface.",
-    status: "preview",
-};
+import stocksoft from "./Projects/stocksoft";
+import portfolio from "./Projects/portfolio";
+import { useLanguage } from "@context/LanguageContext";
 
 const Projects = () => {
+    const { t } = useLanguage();
+
     return (
         <>
             <section
@@ -25,10 +17,11 @@ const Projects = () => {
                     <span className="w-8 h-full p-1 *:w-full flex justify-center">
                         <IoBook className="my-auto size-full" />
                     </span>
-                    <h2>Projects</h2>
+                    <h2>{t("projects.title")}</h2>
                 </header>
 
-                <ul className="grid grid-cols-1 grid-flow-row md:grid-cols-2 [&>:first-child]:md:col-span-2 lg:grid-cols-3  gap-4">
+                <ul className="grid grid-cols-1 grid-flow-row md:grid-cols-2 gap-4">
+                    <CardProject {...portfolio} />
                     <CardProject {...stocksoft} />
                 </ul>
             </section>

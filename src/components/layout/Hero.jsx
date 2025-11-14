@@ -26,7 +26,7 @@ const Hero = () => {
                                 {t("hero.content.career") + " "}
                             </strong>
                             {t("hero.content.text.first") + " "}
-                            <strong className="text-[#60dafb]">
+                            <strong className="text-[#239abb] dark:text-[#60dafb]">
                                 {t("hero.content.stack.react")}
                             </strong>
                             ,
