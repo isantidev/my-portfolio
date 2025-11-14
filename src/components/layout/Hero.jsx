@@ -70,8 +70,8 @@ const Hero = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <span className="absolute -top-[3px] right-[1px] size-4 bg-custom-primary animate-ping rounded-full opacity-80"></span>
-                                <span className="absolute -top-[2px] right-[1px] size-3 rounded-full bg-custom-primary"></span>
+                                <span className="absolute -top-[6px] -right-[1px] size-6 bg-custom-primary animate-ping rounded-full opacity-80"></span>
+                                <span className="absolute -top-[4px] -right-[4px] size-4 rounded-full bg-custom-primary"></span>
                                 <span className="text-custom-accent text-base md:text-lg">
                                     {t("hero.callToAction")}
                                 </span>
