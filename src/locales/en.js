@@ -5,6 +5,10 @@ export default {
             deploy: "View Project",
             code: "View Code",
         },
+        reading: {
+            less: "Return",
+            more: "Read more",
+        },
     },
     nav: {
         experience: "Experience",

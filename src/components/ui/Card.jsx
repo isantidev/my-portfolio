@@ -4,6 +4,7 @@ import { useLanguage } from "@context/LanguageContext";
 
 export const CardJob = ({ title, enterprise, time, description }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const { t } = useLanguage();
 
     const showMoreInfo = () => {
         setIsExpanded(!isExpanded);
@@ -54,7 +55,9 @@ export const CardJob = ({ title, enterprise, time, description }) => {
                         className="block text-sm md:text-base font-medium text-custom-accent/80 mt-2"
                         onClick={showMoreInfo}
                     >
-                        {isExpanded ? "< Read less" : "Read more >"}
+                        {isExpanded
+                            ? `< ${t("components.reading.less")}`
+                            : `${t("components.reading.more")} >`}
                     </button>
                 </div>
             </article>
