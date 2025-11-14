@@ -1,4 +1,11 @@
 export default {
+    components: {
+        buttonState: {
+            preview: "Vista Previa",
+            deploy: "Ver Proyecto",
+            code: "Ver Código",
+        },
+    },
     nav: {
         experience: "Experiencia",
         projects: "Projectos",
@@ -36,7 +43,30 @@ export default {
             },
         },
     },
-    proyects: {},
+    projects: {
+        title: "Proyectos",
+        content: {
+            portfolio: {
+                description:
+                    "Portafolio personal creado con React, Vite y Tailwind CSS, con un diseño moderno, rápido y responsivo. Incluye React Icons y un formulario funcional integrado con Resend para facilitar el contacto.",
+                image: {
+                    caption: "Vista previa del portafolio isantidev",
+                },
+            },
+            stocksoft: {
+                description:
+                    "Stocksoft es un sistema de gestión de inventario basado en la web, creado con un backend PHP, diseñado con CSS y mejorado con componentes JavaScript. Ayuda a las empresas a realizar un seguimiento de los productos, gestionar los datos de stock y optimizar la organización de los productos con una interfaz estructurada y fácil de usar.",
+                image: {
+                    caption:
+                        "Stocksoft - Vista previa de sistema para control de inventario",
+                },
+                button: {
+                    preview: "Ver proyecto",
+                    code: "Ver código",
+                },
+            },
+        },
+    },
     about: {
         title: "Acerca de mí",
         content: {
