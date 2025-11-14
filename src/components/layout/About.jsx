@@ -1,5 +1,8 @@
 import { IoBook } from "react-icons/io5";
 import bigImg from "@images/isantidev-vert.webp";
+import smallOneImg from "@images/small-one-santi.webp";
+import smallTwoImg from "@images/small-three-santi.webp";
+
 import { useLanguage } from "@context/LanguageContext";
 
 const About = () => {
@@ -29,13 +32,13 @@ const About = () => {
 
                     <div className="absolute -bottom-12 left-0 grid grid-cols-2 gap-20 px-[10%] *:ring-8 *:ring-custom-text z-20">
                         <img
-                            src={bigImg}
+                            src={smallOneImg}
                             alt=""
                             className="aspect-square h-full w-full object-cover rounded-lg -rotate-12"
                             loading="lazy"
                         />
                         <img
-                            src={bigImg}
+                            src={smallTwoImg}
                             alt=""
                             className="aspect-square h-full w-full object-cover rounded-lg shadow-xl rotate-12"
                             loading="lazy"
