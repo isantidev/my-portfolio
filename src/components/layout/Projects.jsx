@@ -1,7 +1,7 @@
 import { CardProject } from "@ui/Card.jsx";
 import { IoBook } from "react-icons/io5";
-import stocksoft from "@projects/stocksoft";
-import portfolio from "@projects/portfolio";
+import stocksoft from "./Projects/stocksoft";
+import portfolio from "./Projects/portfolio";
 import { useLanguage } from "@context/LanguageContext";
 
 const Projects = () => {
