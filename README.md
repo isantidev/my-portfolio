@@ -1,118 +1,180 @@
-# My Portfolio
+# 🚀 Personal Portfolio - isanti.dev
 
-## Portfolio Project Structure (goal)
+[![Live Site](https://img.shields.io/badge/Live-isanti.dev-blue?style=for-the-badge)](https://www.isanti.dev)
+[![Lighthouse Score](https://img.shields.io/badge/Performance-88-orange?style=for-the-badge&logo=lighthouse)](https://www.isanti.dev)
+
+A modern, bilingual (ES/EN) portfolio website built with React to showcase frontend development skills and learn industry-standard patterns.
+
+## ✨ Features
+
+-   🌍 **Internationalization**: Full Spanish/English support with Context API
+-   🎨 **Theme Switching**: Dark/Light mode with persistent preferences
+-   📱 **Responsive Design**: Mobile-first approach with Tailwind CSS
+-   ⚡ **Performance Optimized**: Lighthouse scores - Performance: 88, Accessibility: 100, Best Practices: 100, SEO: 92
+-   📬 **Contact Form**: Serverless email handling with Vercel Edge Functions
+-   ♿ **Accessible**: Semantic HTML, ARIA labels, keyboard navigation
+
+## 🎓 What I Learned
+
+### React & State Management
+
+-   Component composition and reusable UI patterns (Atomic Design principles)
+-   Context API for global state (Theme + Language)
+-   Custom hooks for business logic separation (`useTheme`)
+-   Props drilling solutions with Context providers
+
+### Performance Optimization
+
+-   Image optimization (WebP format, responsive images)
+-   Code splitting and lazy loading
+-   Lighthouse-driven improvements
+-   Vite's build optimizations
+-   Core Web Vitals: FCP 0.5s, LCP 0.6s, TBT 30ms
+
+### Backend & Deployment
+
+-   Vercel Edge Functions for serverless architecture
+-   API route handling (`/api/contact-send.js`)
+-   Environment variable management
+-   CI/CD with GitHub integration
+
+### Best Practices
+
+-   Semantic HTML5 structure
+-   Accessibility standards (WCAG) - 100/100 score
+-   ESLint + Prettier configuration
+-   Git workflow with Dependabot
+
+## 🛠️ Tech Stack
+
+**Frontend**
+
+-   React 18
+-   Vite (build tool)
+-   Tailwind CSS
+-   JavaScript
+
+**Backend**
+
+-   Vercel Edge Functions
+-   Resend API (email service)
+
+**DevOps**
+
+-   Vercel (hosting)
+-   GitHub Actions
+-   Dependabot (dependency management)
+
+## 📂 Project Structure
 
 ```
 src/
-├── assets/              # Static assets (images, fonts, icons, etc.)
-│   ├── images/
-│   ├── icons/
-│   └── fonts/
-│
-├── components/          # Reusable, presentational components
-│   ├── ui/              # Primitive components (Button, Card, Modal, Badge, etc.)
-│   │   ├── Button.jsx
-│   │   ├── Card.jsx
-│   │   ├── Modal.jsx
-│   │   ├── Badge.jsx
-│   │   └── index.js     # Export all UI components
-│   │
-│   ├── project/         # Project-specific components
-│   │   ├── ProjectCard.jsx
-│   │   ├── ProjectGallery.jsx
-│   │   ├── CaseStudyLayout.jsx
-│   │   ├── TechStack.jsx
-│   │   └── index.js
-│   │
-│   └── layout/          # Layout components
-│       ├── Header.jsx
-│       ├── Footer.jsx
-│       ├── Navigation.jsx
-│       ├── MainLayout.jsx
-│       └── index.js
-│
-├── pages/               # Top-level page components
-│   ├── Home.jsx
-│   ├── About.jsx
-│   ├── Projects.jsx
-│   ├── ProjectDetail.jsx
-│   ├── Contact.jsx
-│   └── index.js
-│
-├── hooks/               # Custom React hooks
-│   ├── useProjects.js
-│   ├── useScrollAnimation.js
-│   ├── useTheme.js
-│   ├── useLocalStorage.js
-│   └── index.js
-│
-├── utils/               # Pure JavaScript utility functions
-│   ├── constants.js     # Application constants (NAV_LINKS, SOCIAL_LINKS, THEMES)
-│   ├── helpers.js       # Helper functions (formatDate, debounce, slugify)
-│   ├── animations.js    # Animation configurations and utilities
-│   ├── validators.js    # Form validation functions
-│   └── index.js
-│
-├── data/                # Static data (substitute for backend)
-│   ├── portfolioData.js # Main portfolio content and projects
-│   ├── skills.js        # Technical skills and proficiencies
-│   ├── experience.js    # Work experience and education
-│   └── index.js
-│
-├── styles/              # Global styles (if needed beyond Tailwind)
-│   ├── globals.css      # Global CSS and Tailwind imports
-│   └── components.css   # Custom component styles
-│
-└── main.jsx             # Vite entry point
+├── components/
+│   ├── ui/              # Reusable UI components (Card, Pill, Inputs)
+│   ├── layout/          # Page sections (Hero, About, Projects, etc.)
+│   └── hooks/           # Custom React hooks
+├── context/             # Global state (Theme, Language)
+├── locales/             # i18n translations (en.js, es.js)
+├── assets/              # Images and icons
+├── styles/              # Global CSS and keyframes
+└── App.jsx              # Main app component
 
-# Root files
-├── index.html
-├── vite.config.js
-├── tailwind.config.js
-├── postcss.config.js
-├── eslint.config.js
-├── .gitignore
-├── package.json
-└── README.md
+api/                     # Serverless functions
+public/                  # Static assets
 ```
 
-## Key Features of This Structure:
+## 🚀 Getting Started
 
-### 📁 **Component Organization**
+### Prerequisites
 
--   **`ui/`** - Atomic, reusable components that can be used anywhere
--   **`project/`** - Domain-specific components related to showcasing projects
--   **`layout/`** - Structural components that define page layouts
+-   Node.js 22.20.0+
+-   npm 10.9.3+
 
-### 🎣 **Custom Hooks**
+### Installation
 
--   Centralized business logic and stateful operations
--   Reusable across components
--   Easy to test and maintain
+1. **Clone the repository**
 
-### 🛠️ **Utilities**
+```bash
+   git clone https://github.com/isantidev/my-portfolio.git
+   cd portfolio
+```
 
--   Pure functions for common operations
--   Constants for maintainable configuration
--   Animation and validation helpers
+2. **Install dependencies**
 
-### 📊 **Data Layer**
+```bash
+   npm install
+```
 
--   Centralized data management
--   Easy to switch to a CMS or API later
--   Type-safe data structures
+3. **Set up environment variables**
 
-### 🎨 **Styling**
+    Create a `.env` file in the root directory:
 
--   Tailwind CSS for utility-first styling
--   Custom CSS only when necessary
--   Global styles for consistent theming
+```env
+   VITE_RESEND_API_KEY=your_resend_api_key
+   VITE_CONTACT_EMAIL=your@email.com
+```
 
-## Benefits:
+4. **Run development server**
 
--   ✅ **Clear separation of concerns**
--   ✅ **Scalable but not over-engineered**
--   ✅ **Easy to navigate and understand**
--   ✅ **Perfect for portfolio projects**
--   ✅ **Shows good React practices**
--   ✅ **Employer-friendly structure**
+```bash
+   npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173)
+
+### Build for Production
+
+```bash
+npm run build
+npm run preview  # Preview production build locally
+```
+
+## 📧 Contact Form Setup
+
+The contact form uses Vercel Edge Functions and Resend API:
+
+1. Create a [Resend](https://resend.com) account
+2. Get your API key
+3. Add environment variables in Vercel dashboard:
+    - `VITE_RESEND_API_KEY`
+    - `VITE_CONTACT_EMAIL`
+4. Deploy to Vercel
+
+## 📊 Lighthouse Performance
+
+| Metric             | Score   |
+| ------------------ | ------- |
+| **Performance**    | 88/100  |
+| **Accessibility**  | 100/100 |
+| **Best Practices** | 100/100 |
+| **SEO**            | 92/100  |
+
+**Core Web Vitals:**
+
+-   First Contentful Paint: 0.5s
+-   Largest Contentful Paint: 0.6s
+-   Total Blocking Time: 30ms
+-   Cumulative Layout Shift: 0.24
+-   Speed Index: 0.9s
+
+## 🤝 Contributing
+
+This is a learning project, and feedback is always welcome! Feel free to:
+
+-   Open an issue for suggestions
+-   Submit a PR for improvements
+-   Share your thoughts on code structure
+
+## 📝 License
+
+MIT License - feel free to use this project as inspiration for your own portfolio!
+
+## 🔗 Connect
+
+-   **Portfolio**: [isanti.dev](https://www.isanti.dev)
+-   **LinkedIn**: [isantidev](https://www.linkedin.com/in/isantidev)
+-   **GitHub**: [@isantidev](https://www.github.com/isantidev)
+
+---
+
+**Note**: This is a learning project built to explore modern React patterns and best practices. Constructive feedback is appreciated! 🙌
