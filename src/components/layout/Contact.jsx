@@ -19,10 +19,8 @@ const Contact = () => {
                 </span>
                 <h2>{t("contact.title")}</h2>
             </header>
-            <Suspense fallback={null}>
-                <ContactForm />
-                <AsideInfo />
-            </Suspense>
+            <ContactForm />
+            <AsideInfo />
         </section>
     );
 };

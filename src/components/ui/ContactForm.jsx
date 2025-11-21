@@ -45,40 +45,41 @@ const ContactForm = () => {
             onSubmit={handleSubmit}
             className="flex flex-col gap-8 rounded-md px-4 py-8 ring-2 ring-custom-secondary"
         >
-            <Suspense fallback={null}>
-                <FloatingInput
-                    label={t("contact.content.form.inputText")}
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                />
+            <FloatingInput
+                label={t("contact.content.form.inputText")}
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+            />
 
-                <FloatingInput
-                    label={t("contact.content.form.inputEmail")}
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                />
+            <FloatingInput
+                label={t("contact.content.form.inputEmail")}
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+            />
 
-                <FloatingTextarea
-                    label={t("contact.content.form.inputTextarea")}
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                />
-            </Suspense>
+            <FloatingTextarea
+                label={t("contact.content.form.inputTextarea")}
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+            />
 
             <button
                 type="submit"
                 className="mx-auto px-4 py-2 mt-4 text-lg text-custom-bg font-medium md:px-6 md:py-3 rounded-lg bg-custom-accent  hover:scale-110 hover:-translate-y-2 focus:bg-custom-accent/80 focus:scale-90"
             >
-                {t("contact.callToAction")}
+                {status === null && t("contact.callToAction")}
+                {status === "sending" && (
+                    <p>{t("components.buttonState.sending")}</p>
+                )}
+                {status === "sent" && <p>{t("components.buttonState.sent")}</p>}
+                {status === "error" && (
+                    <p>{t("components.buttonState.sendingError")}</p>
+                )}
             </button>
-
-            {status === "sending" && <p>Enviando...</p>}
-            {status === "sent" && <p>Mensaje enviado ✅</p>}
-            {status === "error" && <p>Error al enviar ❌</p>}
         </form>
     );
 };

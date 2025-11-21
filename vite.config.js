@@ -15,6 +15,7 @@ export default defineConfig({
             "@context": "/src/context",
             "@components": "/src/components",
             "@locales": "/src/locales",
+            "@projects": "/src/components/projects",
         },
     },
 });

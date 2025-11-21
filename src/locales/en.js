@@ -3,7 +3,10 @@ export default {
         buttonState: {
             preview: "Preview",
             deploy: "View Project",
-            code: "View Code",
+            code: "Ver Código",
+            sending: "Seding ...",
+            sent: "Message sent ✅",
+            sendingError: "Sending error ❌",
         },
         reading: {
             less: "Return",

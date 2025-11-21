@@ -104,23 +104,25 @@ export const CardProject = (staticContent) => {
 
             <div className="@container mt-auto">
                 <div className="flex justify-between max-h-10 mt-4 gap-2">
-                    <a
-                        href={staticContent.webLink || null}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${
-                            staticContent?.status === "code" ||
-                            !staticContent?.status
-                                ? "hidden"
-                                : "block"
-                        } p-2 size-full bg-custom-primary/40 rounded-sm capitalize text-center`}
-                    >
-                        <span>
-                            {staticContent.status === "deploy"
-                                ? t("components.buttonState.deploy")
-                                : t("components.buttonState.code")}
-                        </span>
-                    </a>
+                    {(staticContent.status === "deploy" ||
+                        staticContent.status === "preview") && (
+                        <a
+                            href={
+                                staticContent.webLink ||
+                                staticContent?.previewLink
+                            }
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 size-full bg-custom-primary/40 rounded-sm capitalize text-center"
+                        >
+                            <span>
+                                {staticContent.status === "deploy"
+                                    ? t("components.buttonState.deploy")
+                                    : t("components.buttonState.preview")}
+                            </span>
+                        </a>
+                    )}
+
                     <a
                         href={
                             staticContent.codeSource ||

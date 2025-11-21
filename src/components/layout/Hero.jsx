@@ -1,9 +1,13 @@
 import profileImg from "@images/mine-AI-removebg.webp";
-import Stack from "@layout/Stack.jsx";
 import "@styles/keyframes.css";
 import { useLanguage } from "@context/LanguageContext";
+import { lazy, Suspense, useState } from "react";
+
+const Stack = lazy(() => import("@layout/Stack.jsx"));
 
 const Hero = () => {
+    const [isLoaded, setIsLoaded] = useState(false);
+
     const { t } = useLanguage();
 
     return (
@@ -53,10 +57,17 @@ const Hero = () => {
                             area-label="profile picture"
                             className="max-h-96 h-full aspect-auto mask-alpha mask-b-from-custom-bg mask-b-from-30 mask-r-from-white mask-r-from-60 mask-r-to-transparent  overflow-hidden rounded-lg  shadow-custom-accent/40 shadow-[0px_0px_15px_0px] "
                         >
+                            {!isLoaded && (
+                                <div className="aspect-video bg-custom-text/5 animate-pulse h-80" />
+                            )}
                             <img
-                                className="h-full object-cover"
+                                className={`h-full object-cover ${
+                                    isLoaded ? "opacity-100" : "opacity-0"
+                                }`}
                                 src={profileImg}
                                 alt="Kevin Santiago Sierra Rodriguez's picture"
+                                onLoad={() => setIsLoaded(true)}
+                                fetchPriority="high"
                             />
                         </span>
                         <div className="absolute bottom-0 -rotate-6">
@@ -79,7 +90,13 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <Stack />
+                <Suspense
+                    fallback={
+                        <div className="h-52 w-full bg-custom-text/5 animate-pulse" />
+                    }
+                >
+                    <Stack />
+                </Suspense>
             </section>
         </>
     );

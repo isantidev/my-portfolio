@@ -52,6 +52,7 @@ const Stack = () => {
                                         src={getIconUrl(tech.icon, theme)}
                                         alt={`${tech.name}'s logo`}
                                         loading="lazy"
+                                        decoding="async"
                                         className={`size-24 p-4 rounded-lg`}
                                     />
                                     <small className="font-medium text-lg capitalize">

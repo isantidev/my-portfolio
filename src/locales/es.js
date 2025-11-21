@@ -4,6 +4,9 @@ export default {
             preview: "Vista Previa",
             deploy: "Ver Proyecto",
             code: "Ver Código",
+            sending: "Enviando ...",
+            sent: "Mensaje enviado ✅",
+            sendingError: "Error al enviar ❌",
         },
         reading: {
             less: "Volver",
