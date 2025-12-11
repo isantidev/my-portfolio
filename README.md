@@ -1,7 +1,7 @@
 # 🚀 Personal Portfolio - isanti.dev
 
 [![Live Site](https://img.shields.io/badge/Live-isanti.dev-blue?style=for-the-badge)](https://www.isanti.dev)
-[![Lighthouse Score](https://img.shields.io/badge/Performance-88-orange?style=for-the-badge&logo=lighthouse)](https://www.isanti.dev)
+[![Lighthouse Score](https://img.shields.io/badge/Performance-100-orange?style=for-the-badge&logo=lighthouse)](https://www.isanti.dev)
 
 A modern, bilingual (ES/EN) portfolio website built with React to showcase frontend development skills and learn industry-standard patterns.
 
@@ -10,7 +10,7 @@ A modern, bilingual (ES/EN) portfolio website built with React to showcase front
 -   🌍 **Internationalization**: Full Spanish/English support with Context API
 -   🎨 **Theme Switching**: Dark/Light mode with persistent preferences
 -   📱 **Responsive Design**: Mobile-first approach with Tailwind CSS
--   ⚡ **Performance Optimized**: Lighthouse scores - Performance: 88, Accessibility: 100, Best Practices: 100, SEO: 92
+-   ⚡ **Performance Optimized**: Lighthouse scores - Performance: 99, Accessibility: 100, Best Practices: 100, SEO: 100
 -   📬 **Contact Form**: Serverless email handling with Vercel Edge Functions
 -   ♿ **Accessible**: Semantic HTML, ARIA labels, keyboard navigation
 
@@ -29,7 +29,7 @@ A modern, bilingual (ES/EN) portfolio website built with React to showcase front
 -   Code splitting and lazy loading
 -   Lighthouse-driven improvements
 -   Vite's build optimizations
--   Core Web Vitals: FCP 0.5s, LCP 0.6s, TBT 30ms
+-   Core Web Vitals: FCP 0.7s, LCP 0.8s, TBT 0ms
 
 ### Backend & Deployment
 
@@ -49,7 +49,7 @@ A modern, bilingual (ES/EN) portfolio website built with React to showcase front
 
 **Frontend**
 
--   React 18
+-   React
 -   Vite (build tool)
 -   Tailwind CSS
 -   JavaScript
@@ -87,8 +87,8 @@ public/                  # Static assets
 
 ### Prerequisites
 
--   Node.js 22.20.0+
--   npm 10.9.3+
+-   Node.js ^22
+-   pnpm ^10
 
 ### Installation
 
@@ -102,7 +102,7 @@ public/                  # Static assets
 2. **Install dependencies**
 
 ```bash
-   npm install
+   pnpm install
 ```
 
 3. **Set up environment variables**
@@ -117,7 +117,7 @@ public/                  # Static assets
 4. **Run development server**
 
 ```bash
-   npm run dev
+   pnpm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173)
@@ -125,8 +125,8 @@ Open [http://localhost:5173](http://localhost:5173)
 ### Build for Production
 
 ```bash
-npm run build
-npm run preview  # Preview production build locally
+pnpm run build
+pnpm run preview  # Preview production build locally
 ```
 
 ## 📧 Contact Form Setup
@@ -144,26 +144,18 @@ The contact form uses Vercel Edge Functions and Resend API:
 
 | Metric             | Score   |
 | ------------------ | ------- |
-| **Performance**    | 88/100  |
+| **Performance**    | 99/100  |
 | **Accessibility**  | 100/100 |
 | **Best Practices** | 100/100 |
-| **SEO**            | 92/100  |
+| **SEO**            | 100/100 |
 
 **Core Web Vitals:**
 
--   First Contentful Paint: 0.5s
--   Largest Contentful Paint: 0.6s
--   Total Blocking Time: 30ms
--   Cumulative Layout Shift: 0.24
--   Speed Index: 0.9s
-
-## 🤝 Contributing
-
-This is a learning project, and feedback is always welcome! Feel free to:
-
--   Open an issue for suggestions
--   Submit a PR for improvements
--   Share your thoughts on code structure
+-   First Contentful Paint: 0.7s
+-   Largest Contentful Paint: 0.8s
+-   Total Blocking Time: 0ms
+-   Cumulative Layout Shift: 0.019
+-   Speed Index: 1.1s
 
 ## 📝 License
 
