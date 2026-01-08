@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { Analytics } from "@vercel/analytics/next";
 import App from "./App";
 import Navigation from "@layout/Navigation.jsx";
 import { ThemeProvider } from "@context/ThemeContext";
@@ -13,6 +14,7 @@ const Footer = lazy(() => import("@layout/Footer.jsx"));
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <ThemeProvider>
+            <Analytics />
             <LanguageProvider>
                 <Navigation />
                 <App />
