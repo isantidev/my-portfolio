@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLanguage } from "@context/LanguageContext";
+import { COPY_FEEDBACK_DURATION } from "../../constants/ui.js";
 import {
     IoCopyOutline,
     IoMailOpenOutline,
@@ -43,7 +44,7 @@ const Contact = ({ social }) => {
 
                 setTimeout(() => {
                     setIsCopied(false);
-                }, 1000);
+                }, COPY_FEEDBACK_DURATION);
             } catch (err) {
                 console.error("Failed to copy:", err);
             }

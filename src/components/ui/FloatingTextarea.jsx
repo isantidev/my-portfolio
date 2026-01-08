@@ -1,10 +1,22 @@
 import { useState } from "react";
+import { 
+    TEXTAREA_ROW_HEIGHT_RATIO, 
+    TEXTAREA_MIN_HEIGHT_RATIO,
+    TEXTAREA_DEFAULT_ROWS,
+    TEXTAREA_MAX_ROWS_DEFAULT 
+} from "../../constants/ui.js";
 
-const FloatingTextarea = ({ label, name, value, onChange, maxRows = 8 }) => {
+const FloatingTextarea = ({ 
+    label, 
+    name, 
+    value, 
+    onChange, 
+    maxRows = TEXTAREA_MAX_ROWS_DEFAULT 
+}) => {
     const [isFocused, setIsFocused] = useState(false);
     const isActive = isFocused || value.length > 0;
-    const minHeight = `${maxRows / 1.5}rem`;
-    const maxHeight = `${maxRows * 1.5}rem`;
+    const minHeight = `${maxRows / TEXTAREA_MIN_HEIGHT_RATIO}rem`;
+    const maxHeight = `${maxRows * TEXTAREA_ROW_HEIGHT_RATIO}rem`;
 
     return (
         <div className="relative w-full">
@@ -15,7 +27,7 @@ const FloatingTextarea = ({ label, name, value, onChange, maxRows = 8 }) => {
                 onChange={onChange}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
-                rows={6}
+                rows={TEXTAREA_DEFAULT_ROWS}
                 style={{ maxHeight, minHeight }}
                 className="w-full px-4 py-3 border-2 border-custom-text/20 bg-custom-secondary/40 rounded-md text-custom-text focus:border-custom-text focus:outline-none transition-colors duration-200"
                 required
